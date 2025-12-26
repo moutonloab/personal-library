@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Library</title>
+    <style>
+        :root {
+            --bg: #faf9f6;
+            --text: #2c2c2c;
+            --accent: #8b4513;
+            --border: #d4c4b0;
+            --hover: #f5f0e8;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .library-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .library-item {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .library-item:last-child {
+            border-bottom: none;
+        }
+        
+        .library-link {
+            display: block;
+            padding: 1.5rem 1rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: background 0.2s;
+        }
+        
+        .library-link:hover {
+            background: var(--hover);
+        }
+        
+        .article-title {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+        
+        .article-author {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .article-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.3rem;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: var(--border);
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 1.5rem 1rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personal Library</h1>
+        <p class="subtitle">A collection of essays and articles</p>
+    </header>
+    
+    <main>
+        <ul class="library-list">
+            
+            <!-- ============================================
+                 HOE EEN NIEUW ARTIKEL TOE TE VOEGEN:
+                 
+                 1. Upload je HTML-bestand naar de /articles/ map
+                 2. Kopieer het blok hieronder
+                 3. Pas de gegevens aan
+                 ============================================ -->
+            
+            <li class="library-item">
+                <a href="articles/nagel-what-is-it-like-to-be-a-bat.html" class="library-link">
+                    <div class="article-title">What Is It Like to Be a Bat?</div>
+                    <div class="article-author">Thomas Nagel</div>
+                    <div class="article-meta">
+                        <span class="category-tag">Philosophy</span>
+                        The Philosophical Review, 1974
+                    </div>
+                </a>
+            </li>
+            
+            <!-- TEMPLATE VOOR NIEUW ARTIKEL (kopieer en pas aan):
+            
+            <li class="library-item">
+                <a href="articles/BESTANDSNAAM.html" class="library-link">
+                    <div class="article-title">TITEL</div>
+                    <div class="article-author">AUTEUR</div>
+                    <div class="article-meta">
+                        <span class="category-tag">CATEGORIE</span>
+                        BRON, JAAR
+                    </div>
+                </a>
+            </li>
+            
+            -->
+            
+        </ul>
+    </main>
+    
+    <footer>
+        <p>Personal Library — Menno</p>
+    </footer>
+</body>
+</html>
