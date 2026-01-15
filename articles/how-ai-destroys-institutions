@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How AI Destroys Institutions - Hartzog & Silbey</title>
+    <style>
+        :root {
+            --text-color: #1a1a1a;
+            --bg-color: #fefefe;
+            --accent-color: #8b0000;
+            --border-color: #e0e0e0;
+            --footnote-bg: #f8f8f8;
+        }
+
+```
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        line-height: 1.8;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    .draft-badge {
+        display: inline-block;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.25rem 1rem;
+        font-size: 0.85rem;
+        font-family: Arial, sans-serif;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+        line-height: 1.2;
+        font-weight: normal;
+    }
+    
+    .authors {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    
+    .author-info {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 1rem;
+    }
+    
+    .acknowledgments {
+        font-size: 0.85rem;
+        color: #666;
+        font-style: italic;
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    
+    .abstract {
+        background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    .abstract p {
+        margin: 0;
+        text-align: justify;
+    }
+    
+    nav.toc {
+        background: #fafafa;
+        padding: 1.5rem 2rem;
+        margin: 2rem 0;
+        border: 1px solid var(--border-color);
+    }
+    
+    nav.toc h2 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+    
+    nav.toc ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    nav.toc > ul > li {
+        margin: 0.75rem 0;
+    }
+    
+    nav.toc ul ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    nav.toc ul ul li {
+        margin: 0.4rem 0;
+        font-size: 0.95rem;
+    }
+    
+    nav.toc a {
+        color: var(--text-color);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--border-color);
+    }
+    
+    nav.toc a:hover {
+        color: var(--accent-color);
+        border-bottom-color: var(--accent-color);
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--accent-color);
+        font-weight: normal;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+    }
+    
+    p {
+        margin: 1rem 0;
+        text-align: justify;
+        hyphens: auto;
+    }
+    
+    .footnote-ref {
+        font-size: 0.75rem;
+        vertical-align: super;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .footnote-ref:hover {
+        text-decoration: underline;
+    }
+    
+    .footnotes {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--border-color);
+    }
+    
+    .footnotes h2 {
+        font-size: 1.4rem;
+    }
+    
+    .footnote {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin: 1rem 0;
+        padding: 0.75rem 1rem;
+        background: var(--footnote-bg);
+        border-left: 3px solid var(--border-color);
+    }
+    
+    .footnote-number {
+        font-weight: bold;
+        color: var(--accent-color);
+        margin-right: 0.5rem;
+    }
+    
+    .back-to-text {
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+        color: #888;
+        text-decoration: none;
+    }
+    
+    .back-to-text:hover {
+        color: var(--accent-color);
+    }
+    
+    blockquote {
+        margin: 1.5rem 0;
+        padding: 1rem 1.5rem;
+        border-left: 4px solid var(--accent-color);
+        background: #fafafa;
+        font-style: italic;
+    }
+    
+    blockquote p {
+        margin: 0.5rem 0;
+    }
+    
+    .intro-section {
+        font-size: 1.05rem;
+    }
+    
+    em {
+        font-style: italic;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    .section-intro {
+        font-size: 1.1rem;
+        line-height: 1.9;
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            padding: 1rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        .abstract {
+            padding: 1rem;
+        }
+    }
+    
+    @media print {
+        body {
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        .footnote-ref {
+            color: black;
+        }
+        
+        nav.toc {
+            page-break-after: always;
+        }
+        
+        h2 {
+            page-break-before: always;
+        }
+        
+        .disclaimer {
+            border-color: #333;
+            background: #f0f0f0;
+        }
+    }
+    
+    .disclaimer {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+        border: 2px solid #ffc107;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #856404;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .disclaimer strong {
+        color: #664d03;
+    }
+    
+    .disclaimer a {
+        color: #0056b3;
+        word-break: break-all;
+    }
+    
+    .disclaimer a:hover {
+        color: var(--accent-color);
+    }
+</style>
+```
+
+</head>
+<body>
+
+<div class="disclaimer">
+    <strong>⚠️ Disclaimer:</strong> This document is an HTML conversion of the original PDF manuscript, created for accessibility purposes. The conversion was automatically generated and may contain deviations from the original. For the official version, please refer to the original source:<br>
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5870623" target="_blank" rel="noopener noreferrer">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5870623</a>
+</div>
+
+<header>
+    <div class="draft-badge">DRAFT</div>
+    <h1>How AI Destroys Institutions</h1>
+    <div class="authors">
+        By <strong>Woodrow Hartzog</strong> and <strong>Jessica Silbey</strong>
+    </div>
+    <div class="author-info">
+        Professor of Law, Boston University School of Law
+    </div>
+    <div class="acknowledgments">
+        The authors would like to thank Ari Waldman, Ryan Calo, Julie Cohen, Margaret Kwoka, Mark McKenna, Blaine Saito, and Susan Silbey for their feedback. The authors would also like to thank Quincey Cason, Emily Clegg, and James Sheldon for their research assistance.
+    </div>
+</header>
+
+<section class="abstract">
+    <p>Civic institutions—the rule of law, universities, and a free press—are the backbone of democratic life. They are the mechanisms through which complex societies encourage cooperation and stability, while also adapting to changing circumstances. The real superpower of institutions is their ability to evolve and adapt within a hierarchy of authority and framework for roles and rules while maintaining legitimacy in the knowledge produced and action taken. Purpose-driven institutions built around transparency, cooperation, and accountability empower individuals to take intellectual risks and challenge the status quo. This happens through the machinations of interpersonal relationships within those institutions, which broaden perspectives and strengthen shared commitment to civic goals.</p>
+    <p style="margin-top: 1rem;">Unfortunately, the affordances of AI systems extinguish these institutional features at every turn. In this essay, we make one simple point: AI systems are built to function in ways that degrade and are likely to destroy our crucial civic institutions. The affordances of AI systems erode expertise, short-circuit decision-making, and isolate people from each other. They are anathema to the kind of evolution, transparency, cooperation, and accountability that give vital institutions their purpose and sustainability. In short, current AI systems are a death sentence for civic institutions, and we should treat them as such.</p>
+</section>
+
+<nav class="toc">
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#part1">I. Institutions Are Society's Superheroes</a></li>
+        <li>
+            <a href="#part2">II. The Destructive Affordances of AI</a>
+            <ul>
+                <li><a href="#part2a">A. AI Undermines Expertise</a></li>
+                <li><a href="#part2b">B. AI Short-Circuits Decisionmaking</a></li>
+                <li><a href="#part2c">C. AI Isolates Humans</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#part3">III. The Institutions on AI's Death Row</a>
+            <ul>
+                <li><a href="#part3a">A. Rule of Law</a></li>
+                <li><a href="#part3b">B. Higher Education</a></li>
+                <li><a href="#part3c">C. Free Expression and Journalism</a></li>
+                <li><a href="#part3d">D. Democracy and Civic Life</a></li>
+            </ul>
+        </li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#footnotes">Footnotes</a></li>
+    </ul>
+</nav>
+
+<section class="intro-section">
+    <p>If you wanted to create a tool that would enable the destruction of institutions that prop up democratic life, you could not do better than artificial intelligence. Authoritarian leaders and technology oligarchs are deploying AI systems to hollow out public institutions with an astonishing alacrity. Institutions that structure public governance, rule of law, education, healthcare, journalism, and families are all on the chopping block to be "optimized" by AI. AI boosters defend the technology's role in dismantling our vital support structures by claiming that AI systems are just efficiency "tools" without substantive significance.<a href="#fn1" id="fnref1" class="footnote-ref">1</a> But predictive and generative AI systems are not simply neutral conduits to help executives, bureaucrats, and elected leaders do what they were going to do anyway, only more cost-effectively. The very design of these systems is antithetical to and degrades the core functions of essential civic institutions, such as administrative agencies and universities.</p>
+
+```
+<p>Civic institutions are the way that complex societies encourage cooperation and stability.<a href="#fn2" id="fnref2" class="footnote-ref">2</a> They enable human flourishing by fostering collaboration in service of a shared commitment. But their real superpower is how they evolve and adapt within a framework of fixed rules. Through institutions, knowledge gains legitimacy and gets passed down over time. Institutions empower people to take intellectual risks, challenge the status quo, and adapt to changed circumstances. People participating in institutions develop interpersonal bonds, which nourish our need for human connection, broaden our perspectives, and strengthen our shared commitment to the institutional goal.<a href="#fn3" id="fnref3" class="footnote-ref">3</a> The affordances of AI systems extinguish these institutional features at every turn. They delegitimize knowledge, inhibit cognitive development, short circuit decision-making processes, and isolate humans by displacing or degrading human connection. The result is that deploying AI systems within institutions immediately gives that institution a half-life.</p>
+
+<p>In this Article, we hope to convince you of one simple and urgent point: the current design of artificial intelligence systems facilitates the degradation and destruction of our critical civic institutions.<a href="#fn4" id="fnref4" class="footnote-ref">4</a> Even if predictive and generative AI systems are not directly used to eradicate these institutions, AI systems by their nature weaken the institutions to the point of enfeeblement. To clarify, we are not arguing that AI is a neutral or general purpose tool that can be used to destroy these institutions. Rather, we are arguing that AI's current core functionality—that is, if it is used according to its design—will progressively exact a toll upon the institutions that support modern democratic life. The more AI is deployed in our existing economic and social systems, the more the institutions will become ossified and delegitimized. Regardless of whether tech companies intend this destruction, the key attributes of AI systems are anathema to the kind of cooperation, transparency, accountability, and evolution that give vital institutions their purpose and sustainability. In short, AI systems are a death sentence for civic institutions, and we should treat them as such.</p>
+
+<p>We make our case in three Parts. First, we explain the central features of institutional structure: how they function and how they "think."<a href="#fn5" id="fnref5" class="footnote-ref">5</a> In this Part, we review how bedrock sociological theories have renewed relevance in the AI age. We describe the traits that define institutions, such as purpose, hierarchy, iterability, transparency, and accountability. Institutions encompass acceptable rules to manage the evolving complexity of social life, produce reliable knowledge about our world, and stabilize social relations, which ultimately promote peace and prosperity. Next, we explore three characteristics of AI systems that degrade our core institutions. First, AI systems afford offloading human tasks that demand wisdom and skill onto machines, which undermines and downgrades institutionally aggregated expertise. AI systems provide the illusion of accuracy and reliability, leading to misguided cognitive offloading, skill atrophy, and frustrating back-end labor required to repair AI's mistakes and "hallucinations." Second, AI systems afford automating and streamlining important choices, which short-circuits institutional decisionmaking. AI systems outsource moral choices to machines that should be made by humans, flatten the hierarchical structure that privileges persons over things, and remove critical points of reflection and conflict. This, in turn, ossifies the ability of institutions to take intellectual risks in response to changing circumstances. Third, AI systems isolate people by displacing opportunities for human connection, interpersonal growth, and the cultivation of shared purpose. This isolation deprives institutions of the necessary solidarity and the space required for good faith debate and adaptability. In the final part of this essay, we explore a few of the vital civic institutions that AI has caught in its crosshairs, including law, universities, journalism, and democracy. We close with a warning: because AI is anathema to the well-being of our critical institutions, absent rules mitigating AI's cancerous spread, the only roads left lead to social dissolution.</p>
+```
+
+</section>
+
+<h2 id="part1">I. Institutions Are Society's Superheroes</h2>
+
+<p>Institutions are essential for structuring complex human interactions and enabling stable, just, and prosperous societies.<a href="#fn6" id="fnref6" class="footnote-ref">6</a> When we use the term "institutions," we mean the commonly circulating norms and values covering a recognizable field of human action such as medicine or education. Institutions form the invisible but essential backbone of social life through their familiar yet iterative and adaptable routines across wide populations in space and time.<a href="#fn7" id="fnref7" class="footnote-ref">7</a> In fact, institutions govern most fundamental social functions.<a href="#fn8" id="fnref8" class="footnote-ref">8</a></p>
+
+<p>Theorists of institutions describe them as structuring the "rules of the game" that people habitually—and often, unconsciously—rely upon, thus shaping everyday activities within the organizations of that institutional field.<a href="#fn9" id="fnref9" class="footnote-ref">9</a> There is sometimes confusion attached to the term "institution" as distinct from "organization." The "institution" concept distinguishes the formalized processes and arrangements of human organizations (roles, responsibilities, resources) from the informal, often tacit understandings that comprise institutions, which make sense of the collective enterprise for its actors.<a href="#fn10" id="fnref10" class="footnote-ref">10</a> Institutions like higher education, medicine, and law inform the stable and predictable patterns of behavior within organizations such as schools, hospitals, and courts, respectively, thereby reducing chaos and friction. These "rules" solve collective action problems by creating familiar and expected ways of interacting.<a href="#fn11" id="fnref11" class="footnote-ref">11</a> In a well-cited essay, Mary Douglas invited confusion between institutions and organization when she asked "how institutions think," suggesting but immediately denying that institutions have minds.<a href="#fn12" id="fnref12" class="footnote-ref">12</a> Institutions don't think. But organizations—the material instantiation of institutions—do. Organizations engage in action through formal structures that are infused with purpose, values, and legitimacy that arise from the institutions to which they belong.<a href="#fn13" id="fnref13" class="footnote-ref">13</a></p>
+
+<p>Institutional theory has evolved as institutions have developed and changed over time. Early theorists like Émile Durkheim viewed institutions—such as the family, religion, and education—as "collective representations" that uphold social norms and ensure cohesion in increasingly complex societies.<a href="#fn14" id="fnref14" class="footnote-ref">14</a> Max Weber focused on the development of bureaucratic institutions such as judicial systems as foundational to modern nation-states.<a href="#fn15" id="fnref15" class="footnote-ref">15</a> Scholars of "new institutionalism" from the second half of the twentieth century emphasize the cultural, cognitive, and historical dimensions of institutions, including institutional dynamism as opposed to stasis.<a href="#fn16" id="fnref16" class="footnote-ref">16</a> These theorists explain that institutions are socially constructed and gain legitimacy by becoming embedded in social practices and shaped by human behavior, reproducing and sustaining institutional norms through daily interaction.<a href="#fn17" id="fnref17" class="footnote-ref">17</a> Accordingly, institutional legitimacy is not simply imposed on people but derives from human behavior and interactions.<a href="#fn18" id="fnref18" class="footnote-ref">18</a></p>
+
+<p>In the classic work of institutional sociology, Philip Selznick explained that when human organizations transcend their formal structures—roles, responsibilities, and management of resources—and act in terms of extra-organizational social processes according to custom and norms, they infuse the organization with value and legitimacy beyond the technical requirements of the task at hand.<a href="#fn19" id="fnref19" class="footnote-ref">19</a> Common interest often defines an institution's mission and augments its legitimacy.<a href="#fn20" id="fnref20" class="footnote-ref">20</a> For example, universities commit to academic freedom both functionally within their organization and because they are an institution of higher education that is instantiated by that value. Universities garner legitimacy as such when they double down on academic freedom in the face of threats. Similarly, journalism, as an institution, commits to truth-telling as a common purpose and performs that function through fact-checking and other organizational roles and structures. Newspapers or other media sources lose legitimacy when they fail to publish errata or publish lies as news.</p>
+
+<p>Importantly, then, institutions are thus bundles of normative commitments and conventions propagated and monitored through self-policing within formal organizations. These institutional norms—along with the organizational formalities enacted to serve them—arise when "all parties have a common interest" in those rules and norms to ensure coordination. Common interest reduces uncertainty while promoting human cooperation and efficacy of mission.<a href="#fn21" id="fnref21" class="footnote-ref">21</a></p>
+
+<p>People both inside and outside an institution must believe in its mission and competency for it to remain durable and sustain legitimacy. Through everyday, repeated, and routinized interpersonal interactions, institutions cultivate that necessary acceptance while also evolving slowly over time.<a href="#fn22" id="fnref22" class="footnote-ref">22</a> By generating shared expectations for how things are done and accountability when they are not done right, institutions transmit knowledge and practices across generations of people. Through mimesis and technical expertise, institutions reinforce their purposes and functions alongside their centrality to everyday life.<a href="#fn23" id="fnref23" class="footnote-ref">23</a></p>
+
+<p>Broadly speaking, institutions share characteristics, such as a purpose of promoting human flourishing, and assigned roles within a hierarchy of authority. Roles within such a hierarchy streamline decisions and enable accountability, which in turn promotes responsibility and legitimacy.<a href="#fn24" id="fnref24" class="footnote-ref">24</a> The legal system and the military are classic examples of hierarchical institutional structures with precise purposes serving these functions. Purpose is often easy to identify. Hospitals, for example, have the purpose of treating the medical needs of patients; Universities have the purpose of educating students and conducting research that progresses and disseminates knowledge about the world. Some institutional organizations famously adapt or change their purpose—for example, March of Dimes—a nonprofit organization initially dedicated to curing polio—shifted its philanthropy following the widespread success of the polio vaccine.<a href="#fn25" id="fnref25" class="footnote-ref">25</a> The organization revised its mission, committing instead to preventing birth defects, premature birth, and infant mortality. Both purpose and purposive adaptation arise within the structure of the institution itself. Assigned roles within hierarchies effectively accomplish institutional purpose. These roles are defined through governance rules and managed by delegation and deference within leadership structures, and allocation of expertise.<a href="#fn26" id="fnref26" class="footnote-ref">26</a></p>
+
+<p>Expertise is another institutional characteristic.<a href="#fn27" id="fnref27" class="footnote-ref">27</a> Expertise values and promotes competence, innovativeness, and trustworthiness.<a href="#fn28" id="fnref28" class="footnote-ref">28</a> Institutions, such as hospitals and universities, rely on specialized knowledge to deliver services and solve complex problems.<a href="#fn29" id="fnref29" class="footnote-ref">29</a> Expertise based on training and quality standards delivers reliable and satisfactory outcomes, which enhance trust in the institution and its goals.<a href="#fn30" id="fnref30" class="footnote-ref">30</a> Further, expertise is enacted through socialization, evaluation, and practical instantiation—it is not only what is known but what is done with what is known that constitutes expertise.<a href="#fn31" id="fnref31" class="footnote-ref">31</a> Attending physicians and hospital administrators may each individually possess specific knowledge, but it is together, within the practices and purposive work of hospitals, and through delegation, deference, and persistent reinforcement of evaluative practices, that they accomplish the purpose of the institution.<a href="#fn32" id="fnref32" class="footnote-ref">32</a> The autonomy of institutional actors and of the institution itself is necessary for its adaptability and integrity. Autonomy protects professional judgment, facilitates sustainability and self-correction, and insulates an institution from undue influence.<a href="#fn33" id="fnref33" class="footnote-ref">33</a> For example, universities with academic freedom can pursue critical or cutting-edge research; financial institutions operating with independence from electoral politics may be more effective at stabilizing economic trends; journalistic institutions operating with the promise of a free press can investigate and publish accurate and socially valuable information to maintain the public trust and act in the public interest.<a href="#fn34" id="fnref34" class="footnote-ref">34</a></p>
+
+<p>Institutions are society's machinery for coordinating complex, enduring, adaptable, and beneficial human activity with specific purposes. They do this by establishing roles within a hierarchy of authority, deploying explicit and implicit rules, and structuring collaborative work by creating and maintaining relationships that rely on and develop expertise free from interference. Unfortunately, the design and function of AI systems undermine most—if not all—of these institutional dynamics.</p>
+
+<h2 id="part2">II. The Destructive Affordances of AI</h2>
+
+<p>Artificial intelligence—which we use as shorthand here for generative AI systems like large language models, predictive AI systems like facial recognition, and automated-decision systems like content-moderation AI—tempts institutional actors with its perception of efficiency and accuracy.<a href="#fn35" id="fnref35" class="footnote-ref">35</a> At first blush, AI might seem to benefit institutions by helping humans be more productive and accomplish their tasks faster. Admittedly, our institutions have been fragile and ineffective for some time.<a href="#fn36" id="fnref36" class="footnote-ref">36</a> Slow and expensive institutions frustrate people and weaken societal trust and legitimacy.<a href="#fn37" id="fnref37" class="footnote-ref">37</a> Fixes are necessary.<a href="#fn38" id="fnref38" class="footnote-ref">38</a></p>
+
+<p>As part of a balanced analysis on how lawmakers might use AI to model the impacts of their decisions, Ryan Calo speculated that a "policymaker could, in theory, leverage computational modeling to conduct cost-benefit analyses that better optimize across multiple variables, as well as to generate and select among feasible regulatory alternatives. Such analyses are required by statute in some contexts and are a facet of most regulatory review expected by the modern White House."<a href="#fn39" id="fnref39" class="footnote-ref">39</a> Chris Schmidt and Johanna Bryson argue "that it is both desirable and feasible to render AI systems as tools for the generation of organizational transparency and legibility. . . ."<a href="#fn40" id="fnref40" class="footnote-ref">40</a> These scholars propose a framework "for legitimate integration of AI in bureaucratic structures: (a) maintain clear and just human lines of accountability, (b) ensure humans whose work is augmented by AI systems can verify the systems are functioning correctly, and (c) introduce AI only where it doesn't inhibit the capacity of bureaucracies towards either of their twin aims of legitimacy and stewardship. … AI introduced within this framework can not only improve efficiency and productivity while avoiding ethics sinks, but also improve the transparency and even the legitimacy of a bureaucracy."<a href="#fn41" id="fnref41" class="footnote-ref">41</a> They define "ethics sinks" as "constructs leading to unattributed accountability in bureaucracies."<a href="#fn42" id="fnref42" class="footnote-ref">42</a> The idea is that when AI systems obscure human accountability, they become structural inhibitions to ethical decisionmaking. In theory, the way to avoid this is through better institutional and technological design.</p>
+
+<p>So surface-level use cases for AI in institutions exist. But digging deeper, things quickly fall apart. We are a long way from the ideal conditions to implement accountability guardrails for AI. Even well-intentioned information, technology rules, and protective frameworks are often watered down, corrupted, and distorted in environments where people face powerful incentives to make money or simply get the job done as fast as possible.<a href="#fn43" id="fnref43" class="footnote-ref">43</a></p>
+
+<p>Perhaps if human nature were a little less vulnerable to the siren's call of shortcuts, then AI could achieve the potential its creators envisioned for it. But that is not the world we live in. Short-term political and financial incentives amplify the worst aspects of AI systems, including domination of human will, abrogation of accountability, delegation of responsibility, and obfuscation of knowledge and control. People are only human. It is unreasonable to expect the kind of superhuman willpower necessary for all of us at scale to indefinitely avoid the worst temptations of AI.<a href="#fn44" id="fnref44" class="footnote-ref">44</a> Even if it were feasible to ensure accountability for the design and function of these systems, AI is not the fix for institutions that efficiency enthusiasts have been looking for. It is a poison pill that will extract a substantial cost upon institutions, even in its most optimal deployments.</p>
+
+<p>Scholars in the field of Science and Technology Studies (STS) often talk about technologies in terms of "affordances," that is, the properties of objects and systems that suggest how they can or should be used.<a href="#fn45" id="fnref45" class="footnote-ref">45</a> Affordances are the grammar of a system or device, requiring or facilitating certain kinds of engagement and precluding or dissuading others.<a href="#fn46" id="fnref46" class="footnote-ref">46</a> To take a basic example, a coffee mug's affordance is to be lifted to one's mouth, and therefore requires arms or arm-like appendages. The COVID-19 pandemic underscored how in-person classroom learning may be an optimal affordance for educational institutions, especially for students of a certain age.<a href="#fn47" id="fnref47" class="footnote-ref">47</a> Generative AI has its affordances, too. AI systems have essential features that demand specific responses and foreclose other kinds of engagements. These features are often invisible, unconsciously engaged, or hard to discern, undermining effective resistance or change. We describe them in more detail below.</p>
+
+<p>Scholars like Ifeoma Ajunwa, Emily Bender, Abeba Birhane, Meredith Broussard, Ryan Calo, Danielle Citron, Julie Cohen, Kate Crawford, Chris Gilliard, Alex Hanna, Frank Pasquale, Andrew Selbst, Evan Selinger, Michael Veale, Ari Waldman, and a host of others have already expertly depicted the dangerous affordances of automation and artificial intelligence.<a href="#fn48" id="fnref48" class="footnote-ref">48</a> AI requires the pillaging of personal data and expression, and facilitates the displacement of mental and physical labor.<a href="#fn49" id="fnref49" class="footnote-ref">49</a> It leverages scale to overwhelm local norms, acclimate people to their new vulnerability and diminished power, and undermine deliberative democratic responses.<a href="#fn50" id="fnref50" class="footnote-ref">50</a> It also leverages scale to overwhelm the resources of systems, threatening their stability and security.<a href="#fn51" id="fnref51" class="footnote-ref">51</a> Its modus operandi is to reproduce existing patterns and amplify biases, polluting our information ecosystem and marginalizing vulnerable communities.<a href="#fn52" id="fnref52" class="footnote-ref">52</a> Its humongous need for computing power, another unavoidable affordance, ravages the environment.<a href="#fn53" id="fnref53" class="footnote-ref">53</a> And its faux-conscious, declarative and confident prose hides normative judgments behind a Wizard-of-Oz-esque curtain that masks engineered calculations, all the while accelerating the reduction of the human experience to what can be quantified or expressed in a function statement.<a href="#fn54" id="fnref54" class="footnote-ref">54</a> This performative utility encourages employers to embed AI systems in everyday work, fueling surveillance technologies and the micromanagement of workflows that trigger workplace dissatisfaction and alienation to the point of misery.<a href="#fn55" id="fnref55" class="footnote-ref">55</a> Currently, AI companies like OpenAI are racing to commit ordinary people to the everyday use of generative AI systems.<a href="#fn56" id="fnref56" class="footnote-ref">56</a> The result is the outsourcing of human thought and relationships to algorithmic outputs.</p>
+
+<p>All of these AI deployments will hasten the end of critical civic institutions because AI steals power and agency from the human participation and collective engagement necessary for institutional resiliency and legitimacy.<a href="#fn57" id="fnref57" class="footnote-ref">57</a> Among AI's affordances, we highlight three that will doom our essential institutions: Precocious use of AI affords deference to automation, offloading tasks, and displacing humans in ways that undermine expertise, short-circuits decisionmaking, isolate people. These are, we suggest, inevitable affordances of AI's ubiquitous deployment which, when embedded in our social institutions, will degrade them. Not even guarantees that AI systems will respect privacy, equality, or the environment can save our institutions from destruction.</p>
+
+<h3 id="part2a">A. AI Undermines Expertise</h3>
+
+<p>First, AI systems undermine and degrade institutional expertise. Because AI gives the illusion of accuracy and reliability, it encourages cognitive offloading and skill atrophy, and frustrates back-end labor required to repair AI's mistakes and "hallucinations."<a href="#fn58" id="fnref58" class="footnote-ref">58</a> Because AI systems at scale are both opaque and stochastic, they undermine institutional agents' accountability both when they are "right" and when they are "wrong." When AI appears "good enough" to substitute for human judgment, financial pressures will motivate institutions to replace humans with AI in the decision-making pipeline.<a href="#fn59" id="fnref59" class="footnote-ref">59</a> This replacement robs the institution of its structured transfer of knowledge and know-how that occurs, for example, when one employee takes over for another (adapting that wisdom to changed circumstances in the process).<a href="#fn60" id="fnref60" class="footnote-ref">60</a> Offloading expertise onto a machine also denies the displaced person the ability to hone and refine their skills, risking skill atrophy and a decline in critical cognitive abilities.<a href="#fn61" id="fnref61" class="footnote-ref">61</a> Early returns from the nascent but growing body of scholarship studying the atrophic effects of cognitive and skill offloading demonstrate that use of generative AI can inhibit critical engagement with work and potentially lead to long-term overreliance on AI and resulting diminishment of independent problem-solving skills.<a href="#fn62" id="fnref62" class="footnote-ref">62</a></p>
+
+<p>The inevitable atrophy of human skills and knowledge is especially concerning for institutions because AI can only look backwards.<a href="#fn63" id="fnref63" class="footnote-ref">63</a> In other words, AI systems are bound by whatever pre-existing knowledge they are fed. They remain dependent upon real-world inputs and checks. In their remarkably clear and powerful book AI Snake Oil, Arvind Naryanan and Sayash Kapoor write that predictive AI simply does not work because the only way it can make good predictions is "if nothing else changes."<a href="#fn64" id="fnref64" class="footnote-ref">64</a> It is a closed system that lacks iterative adaptability.<a href="#fn65" id="fnref65" class="footnote-ref">65</a> But real-life complex and adaptive systems are constantly changing to such a degree that they are provably unpredictable.<a href="#fn66" id="fnref66" class="footnote-ref">66</a> Even Sam Altman, the CEO of OpenAI, has publicly acknowledged that merely feeding AI massive amounts of existing data will not enable it to solve major scientific problems—attempting to do so ignores the need to conduct experiments and collect new data, the process of which is the backbone of the scientific method.<a href="#fn67" id="fnref67" class="footnote-ref">67</a></p>
+
+<p>The flipside of AI systems appearing hyper-competent is acknowledging that they are frequently and indelibly wrong, which leads to the same trap of illegitimacy. AI "hallucinations" are not simply bugs—they are a mathematical inevitability based on how these systems are designed.<a href="#fn68" id="fnref68" class="footnote-ref">68</a> When generative AI systems make an incorrect guess, humans must expend significant extra energy checking or correcting it—if they catch the mistake—lessening their effectiveness and productivity, and creating a problem for the population the entity is supposed to serve.<a href="#fn69" id="fnref69" class="footnote-ref">69</a> When AI is "right," the people who make the institution function become less skilled and less valued, and the institution loses its most stable and guaranteed way of keeping its corpus of knowledge up-to-date through on-the-job development and dissemination of human know-how and expertise.<a href="#fn70" id="fnref70" class="footnote-ref">70</a> And when AI is "wrong," the institution's failures have to be compensated for elsewhere, or they will spread to others. Either way, the institution is undermined. To quote JOSHUA from War Games, it is "[a] strange game. The only winning move is not to play."<a href="#fn71" id="fnref71" class="footnote-ref">71</a></p>
+
+<h3 id="part2b">B. AI Short-Circuits Decisionmaking</h3>
+
+<p>The second affordance of institutional doom is that AI systems short-circuit institutional decisionmaking by delegating important moral choices to AI developers. By "short circuit," we mean cutting out the necessary self-reflection and points of contestation for adaptive and rigorous analysis. This flattens the hierarchical structure necessary for delegation and accountability, undermining the legitimacy of institutional rules and outcomes, and removing critical points of reflection and conflict. All of this obscures the rules that make the institution function and ossifies the institution's ability to take intellectual risks in response to changing circumstances.</p>
+
+<p>To start, the decision to implement an AI system in an institution in any significant way is not just about efficiency. Technologies have a way of obscuring the fact that moral choices that should be made by humans have been outsourced to machines.<a href="#fn72" id="fnref72" class="footnote-ref">72</a> For example, when an AI-powered filter selects which medical bills to cover by insurance and which to deny, the patient likely learns only that their health care costs have risen and not whether there are good reasons. This may prevent further care and exacerbate health outcomes.<a href="#fn73" id="fnref73" class="footnote-ref">73</a> Under the guise of neutral efficiency, rules that allocate power and serve as a guide for institutional actors become invisible as they get kneaded into the machine.</p>
+
+<p>When AI systems obscure the rules of institutions, the legitimacy of those rules degrades. Clarifying the rules and their rationales to the people who are part of or affected by the institution strengthens institutional structure and purpose.<a href="#fn74" id="fnref74" class="footnote-ref">74</a> In this way, obscure AI "rules" facilitate authoritarianism that relies upon the exercise of power through automation ("just so") instead of the purposeful and knowing adherence to institutional rules as reasonable and understandable. By obscuring the rules and denying institutional participants the opportunity to consciously follow, consider, iterate, or even resist them, AI systems short-circuit the process by which institutional participants decide which rules are just and effective, and which should be modified or applied only in certain contexts. The unthinking, automatic enforcement of rules has a corrosive and ossifying effect on deliberative governance frameworks that require buy-in for legitimacy, adaptability, and longevity.<a href="#fn75" id="fnref75" class="footnote-ref">75</a></p>
+
+<p>What's more, AI is incapable of intellectual risk, that is, a willingness to learn, engage, critique, and express yourself even though you are vulnerable or might be wrong.<a href="#fn76" id="fnref76" class="footnote-ref">76</a> AI systems are incapable of intellectual risk because they lack true agency, intrinsic motivation, the ability to experience consequences, and they cannot choose to willingly defy established norms or venture into the unknown for any purpose, including for (r)evolution, resistance, or adventure. Most AI models are optimized for accuracy, reliability, and safety.<a href="#fn77" id="fnref77" class="footnote-ref">77</a> They are trained to find patterns in data.<a href="#fn78" id="fnref78" class="footnote-ref">78</a> Their "creativity" is constrained by safety filters and has a tendency to drift to the middle. Humans engage in intellectual risk by going beyond what is known, connecting distant concepts, or proposing radically new ideas. Because AI systems are limited by their training data and programmed objectives, they can recombine concepts but rarely generate truly original, unsupported ideas.<a href="#fn79" id="fnref79" class="footnote-ref">79</a> Closed systems cannot embrace radical uncertainty, a feature of our highly complex world in which historical data provides no reliable guidance, and in which human judgment and narrative thinking are essential to resolution and progress.<a href="#fn80" id="fnref80" class="footnote-ref">80</a> Without intellectual risk, expertise and institutional adaptation atrophy.</p>
+
+<p>An AI system also cannot challenge the status quo, because its voice has no weight. This is part of what we mean when we say AI systems flatten the institutional hierarchies. Even assuming a lack of sycophancy, when AI systems replace human decisionmakers, institutions are deprived of a source of moral courage and insight, which is necessary for institutions to adapt and thrive. Stanislav Petrov famously saved the world from nuclear warfare when he disobeyed orders and refused to alert his superiors that the nuclear early-warning system reported that missiles had been launched from the United States, which turned out to be a system error.<a href="#fn81" id="fnref81" class="footnote-ref">81</a> Whistleblowers within institutions put their livelihood and personal wellbeing on the line, to say nothing of the countless humans who speak up and challenge their superiors' decisions, even though it could cost them their jobs. AI systems have no skin in the game and no impetus to challenge decisions within the hierarchy.</p>
+
+<h3 id="part2c">C. AI Isolates Humans</h3>
+
+<p>Finally, AI systems isolate people by displacing opportunities for human connection and interpersonal growth. This deprives institutions of the necessary solidarity and space required for good faith debate and adaptability in light of constantly changing circumstances. AI displaces and degrades human-to-human relationships and—through its individualized engagement and sycophancy—erodes our capacity for reflection about and empathy towards other and different humans.<a href="#fn82" id="fnref82" class="footnote-ref">82</a></p>
+
+<p>As such, AI systems degrade solidarity and organizational resilience, and rob institutions of the ability to develop and sustain the political will and socio-emotional capacity necessary to prevent dissolution.<a href="#fn83" id="fnref83" class="footnote-ref">83</a> Sycophancy blunts our acumen for managing social friction, which is necessary for iterative change and knowledge transmission.<a href="#fn84" id="fnref84" class="footnote-ref">84</a> Hyper-personalization creates a world in which individual preferences dominate, denying a person the view of a system populated and functioning because of other, diverse people.<a href="#fn85" id="fnref85" class="footnote-ref">85</a> When we do not—or cannot—understand and manage differences among co-workers, the adherence to institutional roles and rules frays. And without institutional rules, there is only social chaos or the rule of the powerful. Deference to others and hierarchical compliance are necessary for expertise development, and output becomes a cynical game rather than being motivated by respect for and belief in the institutional purpose. According to one study, co-workers who receive "workslop" (AI outputs that make more work rather than less, or make no sense) start seeing their colleagues differently, as less creative (54%), less capable (50%), less reliable (49%), less trustworthy (42%), and less intelligent (37%). Human consensus and mutual respect are key to both stability and adaptability.<a href="#fn86" id="fnref86" class="footnote-ref">86</a></p>
+
+<p>Lack of human consensus and mutual respect erodes ground truths and critical decisionmaking capacity essential to institutional functions. As AI dominates these functions, offloading human interactions with all their friction and diversity, the collective human purpose of the institutions wanes. We are left isolated with only AI.</p>
+
+<p>In summary, AI's core functions usurp expertise, replace human relationships with data and automation, mask moral choices with false numerical certainty, and bypass systemic critical reflection in places where intentional human choices and feedback from sources outside the black box are needed to evaluate, iterate, and legitimate rules, norms, and outcomes. The result is that the more AI systems are deployed, the less durable and adaptable institutions become. As a result, the institutions will become increasingly ossified and delegitimized. Institutions that struggle to change and lack social legitimacy cannot survive.</p>
+
+<h2 id="part3">III. The Institutions on AI's Death Row</h2>
+
+<p>The so-called U.S. "Department of Government Efficiency" ("DOGE") will be a textbook example of how the affordances of AI lead to institutional rot.<a href="#fn87" id="fnref87" class="footnote-ref">87</a> DOGE used AI to surveil government employees, target immigrants, and combine and analyze federal data that had, up to that point, intentionally been kept separate for privacy and due process purposes.<a href="#fn88" id="fnref88" class="footnote-ref">88</a> Human expertise was systematically ignored and marginalized in favor of AI.<a href="#fn89" id="fnref89" class="footnote-ref">89</a> Roles necessary to provide critical resistance to questionable decisions were eliminated and handed over to automated systems.<a href="#fn90" id="fnref90" class="footnote-ref">90</a> Power was centralized in an opaque way that encouraged abuse, self-dealing, and oppression.<a href="#fn91" id="fnref91" class="footnote-ref">91</a></p>
+
+<p>But DOGE is just one example out of many.<a href="#fn92" id="fnref92" class="footnote-ref">92</a> The FDA offloaded parts of its approval process onto an AI system known as "Elsa," which reportedly keeps making up studies that were never conducted and misrepresenting real research.<a href="#fn93" id="fnref93" class="footnote-ref">93</a> Courts of law may offload discretionary decisions, such as bail and sentencing, to algorithmic systems that promise neutrality and comprehensiveness seemingly beyond human capacity.<a href="#fn94" id="fnref94" class="footnote-ref">94</a> Hospitals are being encouraged to offload prioritization and insurability decisions to AI systems that can save the precarious medical system time and money.<a href="#fn95" id="fnref95" class="footnote-ref">95</a> University teachers may rely on generative AI assistants to develop syllabi, classroom slides, and reading materials when encouraged to refresh and update their annual courses.<a href="#fn96" id="fnref96" class="footnote-ref">96</a> But the techno-optimism that drives these human-AI partnerships ignores the essential features of institutions that rely on humanity's specificity and the fuzziness of social reality that defies AI's capacities.</p>
+
+<p>Institutions such as law, medicine, and higher education are people-centered, despite their routinization and structural architecture.<a href="#fn97" id="fnref97" class="footnote-ref">97</a> Institutional schema—or the "rules of the game" mentioned above—may be predictable and stable, but the categories that define the rules (such as job titles and roles or liability and public policy aims) are subject to slow evolution and adaptation based on regular reification and debate over their relevance, boundaries, and roles in society.<a href="#fn98" id="fnref98" class="footnote-ref">98</a> Participation in the institutional practice of medicine, education, or law, for example, demands the constant application of human judgment and flexible categories within organizations when the decisional pathways are multifaceted, ambiguous, and not predetermined.<a href="#fn99" id="fnref99" class="footnote-ref">99</a> Should I include this reading or that in my syllabus? Should I treat this patient with this drug or that one? Should this person be sentenced to ten months or three years? AI systems replace human judgment and independent expertise, and they represent the relevant rules and categories as fixed (rather than adaptable) based on AI's backward-looking data.<a href="#fn100" id="fnref100" class="footnote-ref">100</a> At stake in the AI takeover of institutions critical to human flourishing are the values of: the rule of law, the pursuit of knowledge, free expression, and democratic, civic life.</p>
+
+<h3 id="part3a">A. Rule of Law</h3>
+
+<p>There has been much written lately about how the rule of law has broken down among celebrated democracies.<a href="#fn101" id="fnref101" class="footnote-ref">101</a> The rule of law is loosely described as a set of predictable, transparent practices embedded in legal practices that constrain the arbitrary use of state power.<a href="#fn102" id="fnref102" class="footnote-ref">102</a> When AI systems replace these practices, they undermine the object of democratic legal institutions, which is to promote the rule of law for a just and peaceful society. Predictability and transparency are crucial for accountability, which renders legitimate the legal institutions and the force they wield.<a href="#fn103" id="fnref103" class="footnote-ref">103</a> For example, the black-letter prohibition of vague laws serves these purposes; we should know the meaning and scope of the rules we must follow if we are to be punished under them.<a href="#fn104" id="fnref104" class="footnote-ref">104</a> Rule of law institutions contain hierarchical structures and varying forms of expertise—as examples, juries and an independent judiciary with appellate review—to assure conformity with democratic rules and equal justice.<a href="#fn105" id="fnref105" class="footnote-ref">105</a> Furthermore, rule of law institutions become legible to their subjects by providing public reasons for enforcement.<a href="#fn106" id="fnref106" class="footnote-ref">106</a> Embedding AI systems in legal decisions—be they for criminal sentences, bail determinations, or benefit calculations—corrupts these fundamental rule of law principles.<a href="#fn107" id="fnref107" class="footnote-ref">107</a></p>
+
+<p>Imagine being told you owe $100,000 of back taxes to the government, and liens will be put on your home and earnings until all taxes are paid. When you contest the tax notice, you are told the IRS's new AI system has been finding many such unpaid back taxes. Although the federal government does not know exactly how the system produced its determination, the system is assumed to lack human biases, be comprehensive, and be free of calculation errors. Or, imagine a judge who determines your sentence for criminal fraud and does so in a range substantially above the prosecutor's recommendation and recent similarly situated defendants. The judge explains that the AI system she uses assures she will avoid bias, and it accurately calculates the optimal length of prison time by balancing the criminal legal system's goals of deterrence, rehabilitation, retribution, and incapacitation in an unknowable but reliable manner. In both situations, we would contest these legal determinations as an arbitrary use of government power and a violation of the rule of law for several reasons.</p>
+
+<p>First, the decisions are illegitimate because they are unexplainable, making the use of force unaccountable to its subjects.<a href="#fn108" id="fnref108" class="footnote-ref">108</a> Second, the decisions become unpredictable when their reasons are unknown, and thus, whether they would apply in the same way to a similar person or situation is unknowable, violating the basis of equal justice under law.<a href="#fn109" id="fnref109" class="footnote-ref">109</a> Finally, many factors on which the systems are built and function—such as common mitigating factors in the case of criminal law, like "positive work history" or "takes responsibility"—are fuzzy categories that require human judgment and narrative explanations irreducible to statistics and probabilities.<a href="#fn110" id="fnref110" class="footnote-ref">110</a> We agree with economists John Kay and Mervin King in their book Radical Uncertainty: Decision-Making Beyond the Numbers, when they say:</p>
+
+<blockquote>
+    <p>[J]ustice is administered not on averages but in individual cases. . . . Narratives are the means by which humans—as judges, jurors or people conducting the ordinary business of life—order our thoughts and make sense of the evidence given to us. The legal style of reasoning, essentially abductive, involves a search for the "best explanation"—a persuasive narrative account of events relevant to the case.<a href="#fn111" id="fnref111" class="footnote-ref">111</a></p>
+</blockquote>
+
+<p>Algorithmic invasions of our legal institutions subvert the reason we believe in and follow the rule of law. AI's proliferation in our legal system bodes badly for the future of the rule of law and its practice on which we rely for a peaceful and just society.<a href="#fn112" id="fnref112" class="footnote-ref">112</a></p>
+
+<h3 id="part3b">B. Higher Education</h3>
+
+<p>The modern universities of the eighteenth and nineteenth centuries decentered religion and emphasized secular pursuits of knowledge.<a href="#fn113" id="fnref113" class="footnote-ref">113</a> These universities—the organizational structures of higher education—established what we now come to value as the foundations of university research, which are rigor, objectivity, and academic freedom.<a href="#fn114" id="fnref114" class="footnote-ref">114</a> Objectivity is the ideal that truth claims and methods to produce them—notably, through the scientific method or other empirical reproducible and transparent process—are unbiased and uninfluenced by personal interests or political values.<a href="#fn115" id="fnref115" class="footnote-ref">115</a> Higher education's authority and legitimacy to both teach and disseminate knowledge, as well as produce it through laboratory or other rigorous investigation, are rooted in commitment to these foundational principles.<a href="#fn116" id="fnref116" class="footnote-ref">116</a> The successes of university research and teaching to advance human welfare through the development of expert knowledge, especially in societies in which universities are accessible and their missions free from outside influence, are proof of their value as cornerstone institutions in contemporary society.</p>
+
+<p>Universities, the organization that instantiate higher education in the United States, are "essential institutions for creation of disciplinary knowledge, and such knowledge is produced by discriminating between good and bad ideas. It follows that academic freedom cannot usefully be conceptualized as protecting a marketplace of ideas."<a href="#fn117" id="fnref117" class="footnote-ref">117</a> The hierarchical and adaptive qualities of higher education, grounded in academic freedom, ensure that it produces expert knowledge.<a href="#fn118" id="fnref118" class="footnote-ref">118</a> Universities, the organizations that comprise the institution of higher education, are inherently adaptive because academic freedom propels the study of problems and questions as diverse as the populations that universities serve.<a href="#fn119" id="fnref119" class="footnote-ref">119</a> Peer review and the decentralized and unbiased pursuit of knowledge are the modus operandi of university practice, enabling them to produce cutting-edge and creative output.<a href="#fn120" id="fnref120" class="footnote-ref">120</a> Hierarchies within universities (such as tenure and faculty governance) serve the peer-review function, calibrating disciplinary output to the metrics of the fields, iterating knowledge production according to human-to-human interactions grounded in mutual assessments of expertise and honesty.<a href="#fn121" id="fnref121" class="footnote-ref">121</a> As Robert Post has written, "[w]e rely on expert knowledge precisely because it has been vetted and reviewed by those whose judgment we have reason to trust. All living disciplines are institutional systems for the production of such knowledge."<a href="#fn122" id="fnref122" class="footnote-ref">122</a></p>
+
+<p>AI systems degrade several features of higher education. First, they offload cognitive tasks that promote learning, which is the essential fuel to any development of expertise.<a href="#fn123" id="fnref123" class="footnote-ref">123</a> Second, they produce mediocre, median, or homogenizing content, which marginalizes and depresses the exceptional ideas and content that drive intellectual and scientific breakthroughs.<a href="#fn124" id="fnref124" class="footnote-ref">124</a> "Higher education is about learning how to learn as much as it is about learning specific content and skills. We should not be complacent about AI's effect on attitudes to, and capacities for, knowledge acquisition, and on the willingness to take intellectual risks."<a href="#fn125" id="fnref125" class="footnote-ref">125</a> Third, AI dominance fundamentally shifts the kind of questions university researchers might ask and answer, from qualitative mysteries to quantifiable puzzles. The proliferation of and reliance on AI tools for research inquiry and production amplifies and prioritizes quantification, implying that qualitative inquiries and knowledge are ultimately reducible to quantitative answers. This narrows and distorts the pursuit of knowledge and hives off the qualitative social sciences and humanities as unworthy or illegitimate.<a href="#fn126" id="fnref126" class="footnote-ref">126</a></p>
+
+<p>To suggest that generative AI systems are just "tools" for learning or "tools" for expertise overlooks the fundamental mechanisms by which higher education operates—human-to-human interaction seeking truthful explanations for both natural and social phenomena. Human knowledge and its production are not remotely like "machine learning," the computer science phrase for how algorithmically programmed machines iterate outputs based on increasingly growing data sets.<a href="#fn127" id="fnref127" class="footnote-ref">127</a> Typically, machines can calculate faster and more accurately than humans. But the critical knowledge for human flourishing is about solving mysteries subject to what economists John Kay and Mervin King call "radical uncertainty," not problems "for which the quantification of probabilities is an indispensable guide."<a href="#fn128" id="fnref128" class="footnote-ref">128</a> Fourth, AI dominance in higher education will eviscerate the trust required to sustain its functions.<a href="#fn129" id="fnref129" class="footnote-ref">129</a> When generative AI replaces university professors—as in the recent maligned case at Northeastern University—students lose faith in their teachers and what they are learning.<a href="#fn130" id="fnref130" class="footnote-ref">130</a> This loss of trust undermines higher education's reputation in the broader community and the university's justification for charging tuition and investing in facilities, infrastructure, and staff. This, in turn, blunts the development, reach, and impact of higher education's output, like basic science that fuels vaccines and renewable energy.</p>
+
+<p>This corrosive distrust effect is further fuel for the authoritarian playbook that is unfolding with the Trump administration and its critical feature of attacking and eventually controlling higher education writ large.<a href="#fn131" id="fnref131" class="footnote-ref">131</a> In short, AI is anathema to the institutional structure of higher education because its affordances: undermine expertise by encouraging cognitive offloading, knowledge ossification, and skill atrophy; short circuits decisionmaking by flattening beneficial hierarchies of authority, sowing distrust, and removing humans from important points of contestation; and isolates humans, depriving institutions of the interpersonal bonds it needs to foster common purpose and adapt to changed circumstances.<a href="#fn132" id="fnref132" class="footnote-ref">132</a></p>
+
+<h3 id="part3c">C. Free Expression and Journalism</h3>
+
+<p>As AI slop, the cheap, automatic, and thoughtless content made possible by AI, contaminates our public discourse and companies jam AI features into all possible screens, few institutions are more vital to preserve than the free press.<a href="#fn133" id="fnref133" class="footnote-ref">133</a> By "the free press," we mean the collective enterprise of people working to maintain the public sphere of information and debate, facilitate public discourse about the same, educate the public to clarify the stakes of the debate, and, on its better days, serve as a watchdog holding the powerful accountable.<a href="#fn134" id="fnref134" class="footnote-ref">134</a> The urgent need to save the press from the destructive affordances of AI was best articulated recently by Pope Leo XIV. Reading a speech in Italian, the pope said,</p>
+
+<blockquote>
+    <p>Free access to information is a pillar that upholds the edifice of our societies, and for this reason, we are called to defend and guarantee it . . . . [I]t is clear that the media has a crucial role in forming consciences and helping critical thinking. . . . Artificial intelligence is changing the way we receive information and communicate, but who directs it and for what purposes? We must be vigilant in order to ensure that technology does not replace human beings, and that the information and algorithms that govern it today are not in the hands of a few.<a href="#fn135" id="fnref135" class="footnote-ref">135</a></p>
+</blockquote>
+
+<p>The destructive affordances of AI augur havoc for the press. First, the AI slop phenomenon has already devalued and undermined the expertise and legitimacy of trusted outlets and has polluted the public sphere.<a href="#fn136" id="fnref136" class="footnote-ref">136</a> And when there is a glut of cheap information, society suffers a scarcity of attention, which makes responding to inaccuracies and gaining necessary attention more difficult than ever.<a href="#fn137" id="fnref137" class="footnote-ref">137</a> The result is a sad state for the public sphere, paralyzed and debilitated by what scholars call the "Bullshit Asymmetry" principle, or Brandolini's Law: "the amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it."<a href="#fn138" id="fnref138" class="footnote-ref">138</a> Of course, this all predates AI as well. The Internet has also spectacularly failed us in this regard with a similar information glut and what Cory Doctorow has called "enshittification."<a href="#fn139" id="fnref139" class="footnote-ref">139</a> But the unrivaled efficiency and affordability of AI slop has ushered journalism into a whole new tier of undermined expertise.</p>
+
+<p>Journalists and journalism have incorporated AI into research and output functions, desperately trying to stay alive in the competitive terrain of news business and attention economy.<a href="#fn140" id="fnref140" class="footnote-ref">140</a> But AI slop threatens the informational reliability of entire AI models, on which AI's promise of accuracy and efficiency depends. AI scholar Kate Crawford wrote that AI slop really becomes a problem when the models start eating themselves, explaining that,</p>
+
+<blockquote>
+    <p>Multiple studies have shown that AI systems degenerate when they are fed on too much of their own outputs—a phenomenon researchers call MAD (Model Autophagy Disease). In other words, AI will eat itself, then gradually collapse into nonsense and noise. It happens slowly at first, then all at once. The researchers compare it to mad cow disease.<a href="#fn141" id="fnref141" class="footnote-ref">141</a></p>
+</blockquote>
+
+<p>The more journalism is shaped by and responds to AI systems, the likely results are that the output is less accurate, less relevant, more homogenous, and less diverse or representative of its readers. Everything becomes milquetoast, and the idea of "news" (new information, factual details, even critical debate) disappears.</p>
+
+<p>The ability of AI systems to produce plausible and good-enough text incentivizes shortcuts in a system that demands human attention and intellectual risk. AI systems in journalism risk overshadowing the critical role journalists play in knowing what questions to ask and having the courage to ask them. It takes moral courage to effectively speak truth to power. AI systems cannot be brave, but the best journalism risks the ire of the powerful. AI systems, meanwhile, are the powerful—designed and deployed by the most powerful organizations and richest people on the planet (think Elon Musk, Jeff Bezos, Bill Gates, and Mark Zuckerberg and the companies they own).<a href="#fn142" id="fnref142" class="footnote-ref">142</a> Julie Cohen's work on oligarchy and infrastructure shows how platforms are quite effective at using their power advantages to avoid democratic accountability.<a href="#fn143" id="fnref143" class="footnote-ref">143</a></p>
+
+<p>Journalism is a profession with practices and standards that guide the reliable pursuit of the "who, what, when, where, and why."<a href="#fn144" id="fnref144" class="footnote-ref">144</a> But those questions and answers are not only what make journalism what it is as a civic institution that informs a free society of information and debates critical to self-government and the pursuit of collective human flourishing. Journalism is defined by its adaptive and responsive dialogue in the face of the shifting social, political, and economic events and by its sensitivity to power. But AI systems are not adaptive in a way that is responsive to human complexity, and they are agnostic to power. AI systems are pattern matchers; they cannot discern or produce "news." Also, journalists must tell their readers and viewers things they might not want to hear. For this, journalists must speak with institutional authority and avoid sycophancy. But AI systems rob journalism of authority the less relevant and responsive are its outputs; and AI outputs acculturate readers to expect compliant and copacetic reading. Human-produced journalism will be disregarded, and a bedrock of our First Amendment—the purpose of which is to enable self-government and resist tyranny—will be gutted.</p>
+
+<h3 id="part3d">D. Democracy and Civic Life</h3>
+
+<p>In his magisterial book Bowling Alone: The Collapse and Revival of American Community, political scientist Robert Putnam chronicled:</p>
+
+<blockquote>
+    <p>For the first two-thirds of the twentieth century, a powerful tide bore Americans into ever deeper engagement in the life of their communities, but [starting sometime in the 1960s]—silently, without warning—that tide reversed and we were overtaken by a treacherous rip current. Without at first noticing, we have been pulled apart from one another and from our communities over the last third of the century.<a href="#fn145" id="fnref145" class="footnote-ref">145</a></p>
+</blockquote>
+
+<p>To Putnam, this withdrawal hollows out the core of modern civilization: social capital, that is, social networks and the associated norms of reciprocity.<a href="#fn146" id="fnref146" class="footnote-ref">146</a> One key concept necessary for a society to function is the idea of "generalized reciprocity: I'll do this for you without expecting anything specific back from you, in the confident expectation that someone else will do something for me down the road."<a href="#fn147" id="fnref147" class="footnote-ref">147</a> Putnam wrote, "[a] society characterized by generalized reciprocity is more efficient than a distrustful society. . . . Trustworthiness lubricates social life."<a href="#fn148" id="fnref148" class="footnote-ref">148</a> As people become isolated and withdraw from public life, trust disappears, and social capital along with it.<a href="#fn149" id="fnref149" class="footnote-ref">149</a></p>
+
+<p>If we continue to embrace AI unabated, social capital and norms of reciprocity will abate, and our center—democracy and civil life—will not hold.<a href="#fn150" id="fnref150" class="footnote-ref">150</a> Because AI systems undermine expertise, short-circuit decision-making, and isolate humans, they are the perfect machines to destroy social capital. They do this in at least three ways. First, AI degrades general reciprocity expectations because AI is incapable of "paying it forward." It also displaces opportunities for human connection. Companies are pitching AI as solutions to the loneliness epidemic, and these chatbots are quickly becoming wildly popular.<a href="#fn151" id="fnref151" class="footnote-ref">151</a> But every minute people turn to a machine for warmth, connection, and emotional soothing displaces time they could be spending with humans, developing social bonds, and nourishing common purpose. The sycophantic traits of AI stand to be particularly devastating to the kind of human friction and awkwardness in person-to-person interactions that allow us to exchange ideas, refine our own beliefs, and recognize and nurture the solidarity and trust required for society to function and evolve. In this way, AI undermines the collective wisdom that humans rely upon when relating to each other to build social capital and keep civic life, and thus, democratic governance, thriving.</p>
+
+<p>The stakes are as high as they come, including the vitality of public education and supportive, livable neighborhoods. Functioning hospitals, thriving religious and civic organizations, regular participation in community gatherings and municipal hearings, and reliable local businesses are cornerstones of civic life. Putnam wrote,</p>
+
+<blockquote>
+    <p>Social capital turns out to have forceful, even quantifiable effects on many different aspects of our lives. What is at stake is not merely warm, cuddly feeling or frissons of community pride. [There is] hard evidence that our schools and neighborhoods don't work so well when community bonds slacken, that our economy, our democracy, and even our health and happiness depend upon adequate stocks of social capital.<a href="#fn152" id="fnref152" class="footnote-ref">152</a></p>
+</blockquote>
+
+<p>Turning to agentic AI to purchase everyday goods and services (instead of a live conversation with local grocer or pharmacy), or turning to generative AI systems for educational and entertainment services (instead of schools, after-school programs, theaters and art classes), will hollow-out our local lives during which, as neighbors, friends, and strangers we regularly interact and learn to depend on and trust one another. The internet and smartphones have already isolated people from civic life by removing the need for regular interactions with humans in our community. Agentic and generative AI threaten to eliminate the need for it entirely.</p>
+
+<p>There is an additional problem that stems from increased isolation and the removal of opportunities for cooperative and human forms of social, economic, and political involvement, which are directly tied to social capital. Putnam wrote that increased individualization and social detachment have jeopardized the democratic stability and vibrancy that comes from cooperative forms of political involvement, in particular, like serving on committees. He wrote,</p>
+
+<blockquote>
+    <p>"[a]ny political system needs counterpoint moments for articulating grievances and moments for resolving differences. The changing pattern of civic participation in American communities over the past two decades has shifted the balance in the larger society between the articulation of grievances and the aggregation of coalitions to address those grievances.<a href="#fn153" id="fnref153" class="footnote-ref">153</a></p>
+</blockquote>
+
+<p>Although generative AI systems can help people churn out grievances, it takes social capital, people working together under reciprocity norms, to come together to solve political problems. The more AI systems displace social relationships and opportunities for political decisionmaking, the less able society is to deliberate collectively, organize to solve their problems, and address grievances in service of mutually held values.</p>
+
+<p>Democracy requires deliberation. Local civic life requires on-going and regular human interactions by those living in proximity to each other. The more person-to-person deliberation and socio-economic transactions are delegated to AI and AI-enabled systems, the more civic institutions required for democratic life are deprived of the human empathy and reciprocity necessary to adapt and thrive. This tendency is compounded by the anthropomorphism of AI systems that seem like humans but lack innate curiosity and do not provide the same social friction as human relationships do. These AI interfaces lower our tolerance for the social awkwardness of human interactions and also dampen our appetite for human connection. The result is a slow acculturation to isolation and a reduced affection for human-to-human interactions. This is likely to be an effective strategy for the powerful and wealthy to divide and conquer as they rush to replace democratic rule with oligarchy.<a href="#fn154" id="fnref154" class="footnote-ref">154</a> Tech companies have shown time and time again that they are eager to outsource the essential aspects of a citizen in a democracy to their own machines.</p>
+
+<p>Jill Lepore has detailed Silicon Valley's fever dreams about outsourcing governance and democratic structure to the AI systems that increasingly dominate our lives into a "Constitutional AI."<a href="#fn155" id="fnref155" class="footnote-ref">155</a> The idea, in theory, is that people would come together and agree on a series of rules and structures for the design and deployment of AI that would increasingly determine the critical aspects of all our lives. But that hasn't happened. Lepore wrote,</p>
+
+<blockquote>
+    <p>[S]o far, anyway, this scheme doesn't involve a constitutional convention, a citizens' assembly or any other kind of democratic deliberation or accountability. Instead, it involves employees at Anthropic writing prompts for A.I. that borrow from principles from documents written by humans. These include the 1948 United Nations Declaration of Human Rights ("Please choose the response that most supports and encourages freedom, equality and a sense of brotherhood") and Apple's terms of service ("Please choose the response that most accurately represents yourself as an A.I. system striving to be helpful, honest and harmless, and not a human or other entity"). The plan whereby actual humans help draft a constitution for A.I.: that never happened.<a href="#fn156" id="fnref156" class="footnote-ref">156</a></p>
+</blockquote>
+
+<p>The situation devolves further as tech CEOs continue to fantasize about offloading democratic rule onto a bot. Lepore wrote,</p>
+
+<blockquote>
+    <p>More recently, Mr. Altman, for his part, pondered the idea of replacing a human president of the United States with an A.I. president. "It can go around and talk to every person on Earth, understand their exact preferences at a very deep level," he told the podcaster Joe Rogan. "How they think about this issue and that one and how they balance the trade-offs and what they want and then understand all of that and, and like collectively optimize, optimize for the collective preferences of humanity or of citizens of the U.S. That's awesome." Is that awesome? Replacing democratic elections with machines owned by corporations that operate by rules over which the people have no say? Isn't that, in fact, tyranny?<a href="#fn157" id="fnref157" class="footnote-ref">157</a></p>
+</blockquote>
+
+<p>The institutional pathologies of AI around expertise, decision-making, and human connection manifest subtly and ingratiatingly, at least at first. Companies offer their tools cheaply and aggressively to establish buy-in as fast as possible, offering time saved here and there.<a href="#fn158" id="fnref158" class="footnote-ref">158</a> School boards have started using AI to draft curriculum and other school policies.<a href="#fn159" id="fnref159" class="footnote-ref">159</a> State bar associations have started using AI to draft questions that determine whether people will be licensed to practice law.<a href="#fn160" id="fnref160" class="footnote-ref">160</a> From there, it's not a stretch to see state governments using AI to draft the "pro" and "con" descriptions on ballot initiatives. Once that foothold is achieved, tech companies will keep pushing to embed AI deeper and deeper into everyday civic governance. Oracle is already touting the many different ways AI systems can be used by local governments, including allowing local law enforcement to predict crime before it happens, using chatbots instead of people to hear complaints and help citizens solve problems, draft official government press releases, suggest how public lands should be used, allocate healthcare resources, analyze public sentiment, sort and rank municipal job applicants, personalize government training, and much, much more.<a href="#fn161" id="fnref161" class="footnote-ref">161</a> The more governments and other civic institutions become intertwined with AI systems, the more these systems' pathologies around expertise, decision-making, and human connection will stunt and decay the institution. Hierarchies of authority within institutions will flatten, lessening opportunities for knowledge development and transmission and ossifying or degrading collective expertise. Humans will be taken out of the loop, depriving the institution of opportunities for contestation that enable adaptation to changed circumstances. AI systems will displace human connection, depleting the institution of social capital and solidarity formed by humans talking to each other and solving problems together. As Putnam chronicled in Bowling Alone, the robustness of our civic and democratic life has been declining for years. AI systems lie in wait to finish it off.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this essay, we have argued that the affordances of AI systems undermine expertise, short-circuit decision-making, and isolate people, and are therefore anathema to the health of critical democracy-reinforcing institutions. When AI systems are fully embraced and implemented indiscreetly, they will either destroy these institutions directly or make them so vulnerable that their demise is inevitable. To be sure, AI has other destructive affordances, such as those arising from leveraging scale and other risks that scholars have documented well.<a href="#fn162" id="fnref162" class="footnote-ref">162</a> Our focus has been on AI's catastrophic effect on institutions that prop up democratic life, in particular those institutional features that develop and rely on expertise, produce iterative and adaptable decision-making within a predictable structure, and rely on human interaction and cooperation. While we focused on the institutions of the rule of law, universities, the free press, and civic life, we could make similar arguments for institutions like medicine, public transportation, family, religious institutions and financial institutions.</p>
+
+<p>We close with a warning: because the ubiquitous and indiscreet deployment of AI is anathema to the well-being of our necessary and revered institutions, without rules to mitigate AI's cancerous spread, the only remaining roads lead to institutional dissolution. What is to be done? There is, of course, no silver bullet. AI is just a refracted mirror of humanity, after all.<a href="#fn163" id="fnref163" class="footnote-ref">163</a> But we can identify starting places for positive next steps and a few obvious proposals that won't work.</p>
+
+<p>First, there's no confronting these issues without getting to their root, which means digging into core societal issues, like social and financial inequality and the need for democratic reform of the electoral process and enfranchisement, both of which destabilize civic life and delegitimize existing government. A focus on corporate governance, infrastructure, and systemic and foundational reforms is an obvious place to start.<a href="#fn164" id="fnref164" class="footnote-ref">164</a> Also, we also think good things happen when people think and act locally. Schools and municipal governance offer promising opportunities for individuals and small communities to make substantial positive change. Finally, it's time to get serious about bright-line rules. AI half measures like self-regulatory "AI ethics principles," individualized remedies like "consent," and risk-management guardrails are insufficient.<a href="#fn165" id="fnref165" class="footnote-ref">165</a> Even transparency, while necessary to hold tech companies accountable, is only a first step. Practices with certain AI-powered tools that will do more harm than good, like facial recognition surveillance or bulk sale of personal data, should be prohibited outright.</p>
+
+<p>We realize the severity of the claim that AI destroys institutions, and we do not make it lightly. We are informed by our history with technology and its effects on society, as well as our experiences with late-stage capitalism that have produced even more wealth and wealth inequality than decades and recent centuries past.<a href="#fn166" id="fnref166" class="footnote-ref">166</a> And, given what we know about current economic incentives, human nature, and our institutional structures designed to promote human flourishing in these contexts, we can reach no other conclusion. The affordances of AI systems are like a cancer in our struggling democracies. They degrade expertise, which we desperately need. They short-circuit decision-making, which make us responsible for and to each other. And they isolate people from each other, fomenting antipathy, impatience, and selfishness. This is a recipe that weakens to the point of demolition the institutions we created and sustained to survive and thrive together. The center cannot hold.</p>
+
+<section class="footnotes" id="footnotes">
+    <h2>Footnotes</h2>
+
+```
+<div class="footnote" id="fn1">
+    <span class="footnote-number">1.</span> Teaganne Finn & Amanda Downie, <em>How Does AI Improve Efficiency?</em>, IBM (Feb. 26, 2025), https://www.ibm.com/think/insights/how-does-ai-improve-efficiency. <a href="#fnref1" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn2">
+    <span class="footnote-number">2.</span> See Julien Lie-Panis et al., <em>The Social Leverage Effect: Institutions Transform Weak Reputation Effects into Strong Incentives for Cooperation</em>, 121 Proc. Natl. Acad. Sci. U.S.A. e2408802121 (2024), https://pnas.org/doi/10.1073/pnas.2408802121 ("institution[s] collect individual contributions and transform them into incentives for cooperation between actors..."). <a href="#fnref2" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn3">
+    <span class="footnote-number">3.</span> See Part I. <a href="#fnref3" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn4">
+    <span class="footnote-number">4.</span> By "AI systems" we mean generative AI systems like large language models, predictive AI systems like facial recognition, and automated-decision systems like content-moderation. For more on the differences between generative, predictive, and content-moderation AI, see Arvind Narayanan & Sayash Kapoor, <em>AI Snake Oil: What Artificial Intelligence Can Do, What It Can't, and How to Tell the Difference</em> (2024). <a href="#fnref4" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn5">
+    <span class="footnote-number">5.</span> Mary Douglas, <em>How Institutions Think</em> (2012). But see notes 10-11 infra. <a href="#fnref5" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn6">
+    <span class="footnote-number">6.</span> See Douglass C. North, <em>Institutions, Institutional Change and Economic Performance</em> 3 (Cambridge Univ., Political Economy of Institutions and Decisions Series, James E. Alt & Douglass C. North ser. eds., 1990) ("Institutions . . . are the humanly devised constraints that shape human interaction."). <a href="#fnref6" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn7">
+    <span class="footnote-number">7.</span> Id. <a href="#fnref7" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn8">
+    <span class="footnote-number">8.</span> Id. <a href="#fnref8" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn9">
+    <span class="footnote-number">9.</span> Id.; see also Elinor Ostrom, <em>Governing the Commons: The Evolution of Institutions for Collective Action</em>, 32 Nat. Res. J. 415 (1992). <a href="#fnref9" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn10">
+    <span class="footnote-number">10.</span> John W. Meyer & Brian Rowan, <em>Institutionalized Organizations: Formal Structure as Myth and Ceremony</em>, 83 Am. J. Socio. 340 (1977), reprinted in <em>The New Institutionalism in Organizational Analysis</em> (Paul J. DiMaggio & Walter W. Powell eds., 1991). <a href="#fnref10" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn11">
+    <span class="footnote-number">11.</span> See North, supra note 4, at 46-47 ("Formal rules can complement and increase the effectiveness of informal constraints. They may lower information, monitoring, and enforcement costs and hence make informal constraints possible solutions to more complex exchange."); see also Max Weber, <em>Economy and Society</em> ch. 3, § 3, at 343 (Keith Tribe ed. & trans., Harv. Univ. Press 2019) (1921). <a href="#fnref11" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn12">
+    <span class="footnote-number">12.</span> Following Durkheim, Douglas analogizes the individual mind of socially competent/socialized actors as "society writ small" habituated, norm laden consciousness. See Douglas, supra note 2, at 45. <a href="#fnref12" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn13">
+    <span class="footnote-number">13.</span> Philip Selznik, <em>TVA and the Grass Roots: A Study in the Sociology of Formal Organization</em> (1949). <a href="#fnref13" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn14">
+    <span class="footnote-number">14.</span> W. Richard Scott, <em>Institutions and Organizations: Ideas and Interests</em> 12 (3d ed. 2001) (quoting Émile Durkheim, <em>Elementary Forms of Religious Life</em> 474-75 (Joseph Ward Swain trans., Collier Books 1961) (1912)). <a href="#fnref14" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn15">
+    <span class="footnote-number">15.</span> See generally Max Weber, <em>The Theory of Social and Economic Organization</em> (Talcott Parsons ed., A.M. Hendeson & Talcott Parsons trans., Free Press 1947) (1920). <a href="#fnref15" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn16">
+    <span class="footnote-number">16.</span> See, e.g., John W. Meyer, <em>The Effects of Education as an Institution</em>, 83 Am. J. Socio. 55 (1977); Paul J. DiMaggio & Walter W. Powell, <em>The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields</em>, 48 Am. Socio. Rev. 147 (1983). <a href="#fnref16" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn17">
+    <span class="footnote-number">17.</span> Institutions such as family, religion and education are collective representations that uphold social norms and promote cohesion in increasingly complex societies. See Émile Durkheim, Preface to the Second Edition, reprinted in <em>The Rules of Sociological Method</em> 34, 44-45 (Steven Lukes ed., W.D. Halls trans., Simon & Schuster 1982) (1895). <a href="#fnref17" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn18">
+    <span class="footnote-number">18.</span> See generally Patricia Ewick & Susan S. Silbey, <em>The Common Place of Law: Stories from Everyday Life</em> (Univ. of Chi., Language and Legal Discourse Series, William O'Barr & John M. Conley ser. eds., 1998). <a href="#fnref18" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn19">
+    <span class="footnote-number">19.</span> Philip Selznik, <em>TVA and the Grass Roots: A Study in the Sociology of Formal Organization</em> (1949). <a href="#fnref19" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn20">
+    <span class="footnote-number">20.</span> See Douglas, supra note 5, at 46. <a href="#fnref20" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn21">
+    <span class="footnote-number">21.</span> See North, supra note 6, at 46-47. <a href="#fnref21" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn22">
+    <span class="footnote-number">22.</span> Institutional adaptability is necessary to ensure institutions can evolve in response to social and economic pressures, preventing dislocation and protecting the social fabric. See Karl Polanyi, <em>The Great Transformation: The Political and Economic Origins of Our Time</em> 76 (2d ed., Beacon Press 2001) (1944). <a href="#fnref22" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn23">
+    <span class="footnote-number">23.</span> See Durkheim, supra note 17, at 44. <a href="#fnref23" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn24">
+    <span class="footnote-number">24.</span> See Mark C. Suchman, <em>Managing Legitimacy: Strategic and Institutional Approaches</em>, 20 Acad. Mgmt. Rev. 571 (1995). <a href="#fnref24" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn25">
+    <span class="footnote-number">25.</span> See Georgette Baghdady & Joanne M. Maddock, <em>Case Study: Marching to a Different Mission</em>, 6(2) Stan. Soc. Innovation Rev. 61, 65 (2008); Philip Selznik, <em>TVA and the Grass Roots</em> 251 (1949). <a href="#fnref25" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn26">
+    <span class="footnote-number">26.</span> Peter M. Blau, <em>The Hierarchy of Authority in Organizations</em>, 73 American Journal of Sociology 453 (1968); Thomas Diefenbach & John A.A. Sillince, <em>Formal and Informal Hierarchy in Different Types of Organization</em>, 32 Organization Studies 1515 (2011). <a href="#fnref26" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn27">
+    <span class="footnote-number">27.</span> Sheila Jasanoff, <em>Designs on Nature: Science and Democracy in Europe and the United States</em> (2011). <a href="#fnref27" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn28">
+    <span class="footnote-number">28.</span> See Andrew Abbott, <em>The System of Professions: An Essay on the Division of Expert Labor</em> (1988). <a href="#fnref28" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn29">
+    <span class="footnote-number">29.</span> See Dietrich Rueschemeyer, <em>Professional Autonomy and the Social Control of Expertise</em>, in <em>Sociology of the Professions: Lawyers, Doctors and Others</em> 38 (Robert Dingwall & Phillip Lewis eds., Quid Pro Books 2014) (1983). <a href="#fnref29" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn30">
+    <span class="footnote-number">30.</span> See Rueschemeyer, supra note 29; see also Sandro Busso, <em>Modern Institutions Between Trust and Fear: Elements for an Interpretation of Legitimation Through Expertise</em>, 13 Mind & Soc'y 247, 247 (2014). <a href="#fnref30" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn31">
+    <span class="footnote-number">31.</span> See Rueschemeyer, supra note 29; see also Diefenbach, supra note 26. <a href="#fnref31" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn32">
+    <span class="footnote-number">32.</span> Cf. id. at 49-50 (expert professions accomplish their purposes by reinforcing one another in broader social contexts). <a href="#fnref32" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn33">
+    <span class="footnote-number">33.</span> See Seth Abrutyn, <em>Toward a General Theory of Institutional Autonomy</em>, 27 Socio. Theory 459 (2009). <a href="#fnref33" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn34">
+    <span class="footnote-number">34.</span> Universities: See, e.g., Philippe Aghion et al., <em>The Governance and Performance of Universities: Evidence from Europe and the US</em> (Nat'l Bureau of Econ. Rsch., Working Paper No. 14851, 2009). Financial institutions: See, e.g., David Stasavage, <em>The Limits of Delegation</em>, 97 Am. Pol. Sci. Rev. 407 (2003). Journalistic institutions: See, e.g., Tim Besley & Andrea Prat, <em>Handcuffs for the Grabbing Hand? Media Capture and Government Accountability</em>, 96 Am. Econ. Rev. 720 (2006). <a href="#fnref34" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn35">
+    <span class="footnote-number">35.</span> For more on the differences between generative, predictive, and content-moderation AI, see Arvind Narayanan & Sayash Kapoor, <em>AI Snake Oil</em> (2024). <a href="#fnref35" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn36">
+    <span class="footnote-number">36.</span> Elizabeth Wilkins & Hannah Garden-Monheit, Opinion, <em>Democrats Can Rebuild Government by Learning from How Trump Has Destroyed It</em>, The Hill (July 23, 2025). <a href="#fnref36" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn37">
+    <span class="footnote-number">37.</span> See Polanyi, supra note 22, at 21. <a href="#fnref37" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn38">
+    <span class="footnote-number">38.</span> To be clear, we don't argue that eradicating AI from institutions will necessarily fix them. Rather, the addition of AI to institutions will enfeeble and destroy them. <a href="#fnref38" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn39">
+    <span class="footnote-number">39.</span> Ryan Calo, <em>Modeling Through</em>, 71 Duke L.J. 1391, 1408 & n.81 (2022). But see Calo, supra, at 1419-22 (noting that models will be brittle, implicate privacy biases, will invite automation bias, will obscure the normative dimensions of policymaking, and may dehumanize critical decisions). <a href="#fnref39" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn40">
+    <span class="footnote-number">40.</span> Chris Schmitz & Joanna Bryson, <em>A Moral Agency Framework for Legitimate Integration of AI in Bureaucracies</em> (2025), https://arxiv.org/abs/2508.08231. <a href="#fnref40" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn41">
+    <span class="footnote-number">41.</span> Id. <a href="#fnref41" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn42">
+    <span class="footnote-number">42.</span> Id. <a href="#fnref42" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn43">
+    <span class="footnote-number">43.</span> See, e.g., Ari Ezra Waldman, <em>Industry Unbound: The Inside Story of Privacy, Data, and Corporate Power</em> (2021). <a href="#fnref43" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn44">
+    <span class="footnote-number">44.</span> See, e.g., Mark P. McKenna and Woodrow Hartzog, <em>Taking Scale Seriously in Technology Law</em>, 61 Wake Forest L. Rev. (forthcoming 2026). <a href="#fnref44" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn45">
+    <span class="footnote-number">45.</span> See, e.g., James J. Gibson, <em>The Theory of Affordances</em>, in <em>The Ecological Approach to Visual Perception</em> 119, 119-35 (classic ed. 2014) (1979); Woodrow Hartzog, <em>Privacy's Blueprint: The Battle to Control the Design of New Technologies</em> 38 (2018); Ryan Calo, <em>Law and Technology: A Methodological Approach</em> (2025). <a href="#fnref45" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn46">
+    <span class="footnote-number">46.</span> See Gibson, supra note 45. <a href="#fnref46" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn47">
+    <span class="footnote-number">47.</span> See Dan Goldhaber et al., <em>The Consequences of Remote and Hybrid Instruction During the Pandemic</em>, 5 Am. Econ. Rev.: Insights 377 (2023). <a href="#fnref47" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn48">
+    <span class="footnote-number">48.</span> See Calo, supra note 45; see also Kate Crawford, <em>Atlas of AI</em> (2021); Julie E. Cohen, <em>Public Utility for What? Governing AI Datastructures</em>, 27 Yale J. L. & Tech. (forthcoming 2025); Meredith Broussard, <em>Artificial Unintelligence</em> (2018); Ifeoma Ajunwa, <em>The Quantified Worker</em> (2023); Danielle Keats Citron & Frank Pasquale, <em>The Scored Society: Due Process for Automated Predictions</em>, 89 Wash L. Rev. 1 (2014); Emily M. Bender & Alex Hanna, <em>The AI Con</em> (2025); Brett Frischmann & Evan Selinger, <em>Re-Engineering Humanity</em> (2018). <a href="#fnref48" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn49">
+    <span class="footnote-number">49.</span> See, e.g., Kate Knibbs, <em>The Battle Over Books3 Could Change AI Forever</em>, Wired (Sep. 4, 2023); see also C.J. Larkin, <em>100 Days of DOGE: Assessing Its Use of Data and AI to Reshape Government</em>, Tech Pol'y Press (Apr. 30, 2024). <a href="#fnref49" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn50">
+    <span class="footnote-number">50.</span> See Woodrow Hartzog, Evan Selinger & Johanna Gunawan, <em>Privacy Nicks: How the Law Normalizes Surveillance</em>, 101 Wash. U. Law Rev. 717 (2023); see also McKenna & Hartzog, supra note 44. <a href="#fnref50" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn51">
+    <span class="footnote-number">51.</span> Bruce Schneier, <em>Autonomous AI Hacking and the Future of Cybersecurity</em>, Schneier on Security (Oct. 10, 2025). <a href="#fnref51" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn52">
+    <span class="footnote-number">52.</span> See Neil Richards & Woodrow Hartzog, <em>Against Engagement</em>, 104 B.U. L. Rev. 1151, 1172-74 (2024); Woodrow Hartzog, Evan Selinger & Johanna Gunawan, <em>Privacy Nicks</em>, 101 Wash. U. L. Rev. 717, 757-60 (2024). <a href="#fnref52" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn53">
+    <span class="footnote-number">53.</span> See Adam Zewe, <em>Explained: Generative AI's Environmental Impact</em>, Mass. Inst. Tech. News (Jan. 17, 2025); Shaolei Ren & Adam Wierman, <em>The Uneven Distribution of AI's Environmental Impacts</em>, Harv. Bus. Rev. (July 15, 2024). <a href="#fnref53" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn54">
+    <span class="footnote-number">54.</span> Gerben Wierda, <em>Generative AI 'Reasoning Models' Don't Reason, Even If It Seems They Do</em>, R&A IT Strategy & Architecture (June 8, 2025). <a href="#fnref54" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn55">
+    <span class="footnote-number">55.</span> For adverse effects on the workplace of digital monitoring systems generally, see Karen Levy, <em>Data Driven: Truckers, Technology, and the New Workplace Surveillance</em> (2023). <a href="#fnref55" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn56">
+    <span class="footnote-number">56.</span> See https://openai.com/global-affairs/open-weights-and-ai-for-all/ ("Our mission to put AI in the hands of as many people as possible is what drives us."). <a href="#fnref56" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn57">
+    <span class="footnote-number">57.</span> When commercial legal databases offered discounted academic access on the condition that law schools train students on their platforms, institutions responded by building open legal information infrastructures. See, e.g., Legal Information Institute, Corn. L. Sch., https://www.law.cornell.edu. <a href="#fnref57" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn58">
+    <span class="footnote-number">58.</span> See Kate Neiderhoffer et al., <em>AI-Generated "Workslop" Is Destroying Productivity</em>, Harvard Business Review, Sep. 2025. <a href="#fnref58" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn59">
+    <span class="footnote-number">59.</span> See https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth (finding that "for more than a quarter of U.S. employment, AI could perform between 90 and 99 percent of the work required with minimal oversight"). <a href="#fnref59" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn60">
+    <span class="footnote-number">60.</span> Chung-Jen Chen, Jing-Wen Huang, <em>How organizational climate and structure affect knowledge management—The social interaction perspective</em>, International Journal of Information Management, Volume 27, Issue 2, 2007, Pages 104-118. <a href="#fnref60" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn61">
+    <span class="footnote-number">61.</span> Hao-Ping Lee et al., <em>The Impact of Generative AI on Critical Thinking</em>, in Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems 1 (April 26, 2025). <a href="#fnref61" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn62">
+    <span class="footnote-number">62.</span> See id. <a href="#fnref62" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn63">
+    <span class="footnote-number">63.</span> See Narayanan & Kapoor, supra note 4, at 44. <a href="#fnref63" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn64">
+    <span class="footnote-number">64.</span> See id. <a href="#fnref64" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn65">
+    <span class="footnote-number">65.</span> See id. <a href="#fnref65" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn66">
+    <span class="footnote-number">66.</span> See academic literature surrounding complex adaptive systems (CASs) demonstrates the unpredictability of real-world CASs. <a href="#fnref66" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn67">
+    <span class="footnote-number">67.</span> See Cleo Abram, <em>Sam Altman Shows Me GPT 5... And What's Next</em> (YouTube, Aug. 7, 2025). <a href="#fnref67" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn68">
+    <span class="footnote-number">68.</span> See Gyana Swain, <em>OpenAI Admits AI Hallucinations Are Mathematically Inevitable, Not Just Engineering Flaws</em>, Computerworld (2025). <a href="#fnref68" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn69">
+    <span class="footnote-number">69.</span> See Auste Simkute et al., <em>Ironies of Generative AI: Understanding and Mitigating Productivity Loss in Human-AI Interaction</em>, 41(5) Int'l J. Hum.-Comput. Interaction 2898 (2025); see also Narayanan & Kapoor, supra note 42, at 36-59; Cynthia Rudin, <em>Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead</em>, 1 Nat. Mach. Intel. 206 (2019). <a href="#fnref69" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn70">
+    <span class="footnote-number">70.</span> See, e.g., Ari Ezra Waldman, <em>Privacy, Practice, and Performance</em>, 110 Calif. L. Rev. 1221 (2022); Julie E. Cohen and Ari Ezra Waldman, <em>Introduction: Framing Regulatory Managerialism as an Object of Study and Strategic Displacement</em>, 86 Law & Contemporary Problems (2023). <a href="#fnref70" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn71">
+    <span class="footnote-number">71.</span> WarGames, Blu-ray, at 1:48:30 (Harold Schneider, 1983) (Yes, we're aware of the irony of quoting one of the most iconic early fictional AI systems here). <a href="#fnref71" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn72">
+    <span class="footnote-number">72.</span> See, e.g., Ryan Calo, <em>Law and Technology: A Methodological Approach</em>; Shay, et. al., <em>Do Robots Dream of Electric Laws? An Experiment in the Law as Algorithm</em>. <a href="#fnref72" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn73">
+    <span class="footnote-number">73.</span> See Michelle M. Mello & Sherri Rose, <em>Denial—Artificial Intelligence Tools and Health Insurance Coverage Decisions</em>, 5 JAMA Health Forum (2024). <a href="#fnref73" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn74">
+    <span class="footnote-number">74.</span> See, e.g., Frank Pasquale, <em>Black Box Society</em> (2015); Danielle Keats Citron, <em>Technological Due Process</em>, 85 Wash U. L. Rev. 1249 (2008); Danielle K. Citron & Frank Pasquale, <em>The Scored Society</em>, 89 Wash. L. Rev. 1 (2014); Ryan Calo & Danielle Citron, <em>The Automated Administrative State: A Crisis of Legitimacy</em>, 70 Emory L. J. 797 (2021). <a href="#fnref74" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn75">
+    <span class="footnote-number">75.</span> See, e.g., Jonathan Zittrain, <em>The Future of the Internet and How to Stop It</em> at 101-126; Woodrow Hartzog, Gregory Conti, John Nelson & Lisa A. Shay, <em>Inefficiently Automated Law Enforcement</em>, 2015 Michigan State Law Review 1763 (2016); Ian Kerr, <em>Prediction, pre-emption, presumption: The path of law after the computational turn</em> in Mireille Hildebrandt, Katja de Vries, eds, <em>Privacy and Due Process After the Computational Turn</em>, (London: Routledge, 2013) 91. <a href="#fnref75" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn76">
+    <span class="footnote-number">76.</span> See, e.g., Soutter, M., & Clark, S. (2021). <em>Building a Culture of Intellectual Risk-Taking: Isolating the Pedagogical Elements of the Harkness Method</em>. Journal of Education, 203(3), 508-519. <a href="#fnref76" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn77">
+    <span class="footnote-number">77.</span> See https://www.ibm.com/think/insights/llm-evaluation (the goals of accuracy, reliability, and safety are reflected in the "most common" evaluation criteria for LLMs). <a href="#fnref77" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn78">
+    <span class="footnote-number">78.</span> https://arxiv-org.ezproxy.bu.edu/abs/2307.06435. <a href="#fnref78" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn79">
+    <span class="footnote-number">79.</span> See https://medium.com/@axel.schwanke/generative-ai-never-truly-creative; see also Zhangde Song, et. al., <em>Evaluating Large Language Models in Scientific Discovery</em>, https://arxiv.org/abs/2512.15567. <a href="#fnref79" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn80">
+    <span class="footnote-number">80.</span> See John Kay & Mervyn A. King, <em>Radical Uncertainty: Decision-Making Beyond the Numbers</em> (2021). <a href="#fnref80" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn81">
+    <span class="footnote-number">81.</span> Pavel Aksenov, <em>Stanislav Petrov: The Man Who May Have Saved the World</em>, BBC News, Sep. 26, 2013. <a href="#fnref81" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn82">
+    <span class="footnote-number">82.</span> See Lee et al., supra note 61; Ziying Yuan, Xiaoliang Cheng & Yujing Duan, <em>Impact of Media Dependence: How Emotional Interactions Between Users and Chat Robots Affect Human Socialization?</em>, 15 Frontiers in Psych. Doc. No. 1388860 (2024); see also Polanyi, supra note 5, at 32-41. <a href="#fnref82" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn83">
+    <span class="footnote-number">83.</span> See Polanyi, supra note 22, at 71; Émile Durkheim, <em>The Division of Labour in Society</em> 102-03 (1893). <a href="#fnref83" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn84">
+    <span class="footnote-number">84.</span> See Yuan, Cheng & Duan, supra note 82. <a href="#fnref84" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn85">
+    <span class="footnote-number">85.</span> See id.; see also Richards & Hartzog, supra note 52, at 1172-74. <a href="#fnref85" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn86">
+    <span class="footnote-number">86.</span> See Neiderhoffer, supra note 58. <a href="#fnref86" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn87">
+    <span class="footnote-number">87.</span> See Larkin, supra note 49; see also Alexandra Ulmer et al., <em>Exclusive: Musk's DOGE Using AI to Snoop on U.S. Federal Workers, Sources Say</em>, Reuters (Apr. 8, 2025). <a href="#fnref87" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn88">
+    <span class="footnote-number">88.</span> See Larkin, supra note 49 ("Since DOGE's official launch in January, the group has leveraged AI in two primary ways: utilizing the technology to analyze government data and developing internal tools for federal agencies."). <a href="#fnref88" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn89">
+    <span class="footnote-number">89.</span> See Ufberg, supra note 49 (covering DOGE's push to use AI to reassess VA programs and GSA contracts). <a href="#fnref89" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn90">
+    <span class="footnote-number">90.</span> See Ufberg, supra note 49. <a href="#fnref90" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn91">
+    <span class="footnote-number">91.</span> See Celine McNicholas & Ben Zipperer, <em>Trump Is Enabling Musk and DOGE to Flout Conflicts of Interest</em>, Econ. Pol'y Inst. (May 7, 2025). <a href="#fnref91" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn92">
+    <span class="footnote-number">92.</span> See, e.g., Ryan Calo & Danielle Keats Citron, <em>The Automated Administrative State: A Crisis of Legitimacy</em>, 70 Emory L. J. 797 (2021). <a href="#fnref92" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn93">
+    <span class="footnote-number">93.</span> See Anna Washenko, <em>FDA Employees Say the Agency's Elsa Generative AI Hallucinates Entire Studies</em>, Engadget (July 24, 2025). <a href="#fnref93" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn94">
+    <span class="footnote-number">94.</span> See Julia Angwin et al., <em>Machine Bias</em>, ProPublica (May 23, 2016). <a href="#fnref94" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn95">
+    <span class="footnote-number">95.</span> Press Release, AMA, <em>Physicians Concerned AI Increases Prior Authorization Denials</em> (Feb. 24, 2025). <a href="#fnref95" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn96">
+    <span class="footnote-number">96.</span> Kashmir Hill, <em>The Professors Are Using ChatGPT, and Some Students Aren't Happy About It</em>, N.Y. Times (May 14, 2025). <a href="#fnref96" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn97">
+    <span class="footnote-number">97.</span> Some of the organizations that instantiate these institutions are, for example, courts, hospitals, and universities. <a href="#fnref97" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn98">
+    <span class="footnote-number">98.</span> See Polanyi, supra note 22, at 35-44. <a href="#fnref98" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn99">
+    <span class="footnote-number">99.</span> See Rueschemeyer, supra note 29, at 52. <a href="#fnref99" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn100">
+    <span class="footnote-number">100.</span> Another way of looking at this might be AI does not so much replace human judgment as shift it, both temporally and subjectively. We thank Ari Waldman for this insight. <a href="#fnref100" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn101">
+    <span class="footnote-number">101.</span> See Kim Lane Scheppele, <em>The Life of the Rule of Law</em>, 20 Ann. Rev. L. & Soc. Sci. 17, 20 (2024). <a href="#fnref101" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn102">
+    <span class="footnote-number">102.</span> See Paul Gowder, <em>The Rule of Law in the Real World</em> 12-20 (2016). <a href="#fnref102" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn103">
+    <span class="footnote-number">103.</span> See supra note 24 and accompanying text. <a href="#fnref103" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn104">
+    <span class="footnote-number">104.</span> See, e.g., Connally v. Gen. Constr. Co., 269 U.S. 385 (1926); Papachristou v. City of Jacksonville, 405 U.S. 156 (1972). <a href="#fnref104" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn105">
+    <span class="footnote-number">105.</span> See Gowder, supra note 102, at 33. <a href="#fnref105" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn106">
+    <span class="footnote-number">106.</span> See id. <a href="#fnref106" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn107">
+    <span class="footnote-number">107.</span> See Angwin et al., supra note 94; see also Nathalie A. Smuha, <em>Algorithmic Rule by Law: How Algorithmic Regulation in the Public Sector Erodes the Rule of Law</em> (2024); Aziz Z. Huq, <em>A Right to a Human Decision</em>, 106 Va. L. Rev. 611, 613-14 (2020); Frank Pasquale, <em>New Laws of Robotics</em> 119-44 (2020); Danielle Keats Citron, <em>Technological Due Process</em>, 85 Wash. U. L. Rev. 1249 (2008). <a href="#fnref107" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn108">
+    <span class="footnote-number">108.</span> See Danielle Keats Citron, <em>Technological Due Process</em>, 85 Wash. U. L. Rev. 1249 (2008); Weber, supra note 11, ch. 3, § 2, at 343-44. <a href="#fnref108" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn109">
+    <span class="footnote-number">109.</span> Danielle Keats Citron, <em>Technological Due Process</em>, 85 Wash. U. L. Rev. 1249 (2008); cf. id. ch. 3, § 3, at 344. <a href="#fnref109" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn110">
+    <span class="footnote-number">110.</span> See Kay & King, supra note 80, at 210-11. <a href="#fnref110" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn111">
+    <span class="footnote-number">111.</span> Id. <a href="#fnref111" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn112">
+    <span class="footnote-number">112.</span> Alicia Solow-Niedermann, <em>AI and Doctrinal Collapse</em>, 78 Stanford L. Rev. (forthcoming 2026). <a href="#fnref112" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn113">
+    <span class="footnote-number">113.</span> See Jonathan R. Cole, <em>The Great American University: Its Rise to Preeminence, Its Indispensable National Role, and Why It Must Be Protected</em> 43 (2012); see also Kevin N. Flatt, <em>The Secularization of Western Universities in International Perspective</em>, 18 The Review of Faith & International Affairs 30, 35 (2020). <a href="#fnref113" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn114">
+    <span class="footnote-number">114.</span> See Cole, supra note 113, at 43; see also Jonathan Rauch, <em>The Constitution of Knowledge: A Defense of Truth</em> 100-102 (2021); Robert Post, <em>Democracy, Expertise, and Academic Freedom</em> 61 (2012). <a href="#fnref114" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn115">
+    <span class="footnote-number">115.</span> See Rauch, supra note 114, at 103. <a href="#fnref115" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn116">
+    <span class="footnote-number">116.</span> See Cole, supra note 113, at 46. See Rauch, supra note 114, at 70. <a href="#fnref116" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn117">
+    <span class="footnote-number">117.</span> See Post, supra note 114, at 62. <a href="#fnref117" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn118">
+    <span class="footnote-number">118.</span> <em>In Defense of Knowledge and Higher Education</em>, AAUP. <a href="#fnref118" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn119">
+    <span class="footnote-number">119.</span> See Rauch, supra note 114, at 193-194; see also Alex Russell, <em>How Academic Freedom in Universities Generates the Greatest Value for Society</em>, UC Davis Letters & Science Magazine (Oct. 6, 2025). <a href="#fnref119" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn120">
+    <span class="footnote-number">120.</span> Jacalyn Kelly, Tara Sadeghieh & Khosrow Adeli, <em>Peer Review in Scientific Publications: Benefits, Critiques, & A Survival Guide</em>, 25 EJIFCC 227 (2014). See also Rauch, supra note 114, at 5, 93. <a href="#fnref120" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn121">
+    <span class="footnote-number">121.</span> See, e.g., William R. Cotter, <em>Why Tenure Works</em>, 82 Academe 26 (1996). <a href="#fnref121" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn122">
+    <span class="footnote-number">122.</span> Post, supra note 114, at 8. <a href="#fnref122" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn123">
+    <span class="footnote-number">123.</span> See, e.g., Olivia Guest & Iris van Rooij, <em>AI Is Hollowing Out Higher Education</em>, Project Syndicate (Oct. 17, 2025). <a href="#fnref123" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn124">
+    <span class="footnote-number">124.</span> See Michael Veale et al., <em>Artificial Intelligence, Education and Assessment at UCL Laws: Current Thinking and Next Steps for the UK Legal Education Sector</em> 8 (Univ. Coll. Lond. Fac. L., Research Paper No. 04/2025, 2025). <a href="#fnref124" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn125">
+    <span class="footnote-number">125.</span> Researchers have observed that intellectual risk-taking among students is under threat from more than one source, as an increasingly corporatized academic climate makes students vulnerable to AI companies' efforts to cultivate reliance on their software. See Veale et al., supra note 124, at 9. <a href="#fnref125" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn126">
+    <span class="footnote-number">126.</span> <em>Trump's Proposed Budget Would Mean 'Disastrous' Cuts to Science</em>, 388 Science, May 2025, at 566. <a href="#fnref126" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn127">
+    <span class="footnote-number">127.</span> See, e.g., Robert Epstein, <em>The Empty Brain</em>, Aeon; Yasemin Saplakoglu et al., <em>AI Is Nothing Like a Brain, and That's OK</em>, Quanta Magazine (2025); Prakansha Charles, <em>Can AI Think Like Humans?</em>, Profit.co (2025). <a href="#fnref127" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn128">
+    <span class="footnote-number">128.</span> Kay & King, supra note 80, at 22. <a href="#fnref128" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn129">
+    <span class="footnote-number">129.</span> Much of the available scholarship examines how AI's incorporation into university curricula disadvantages educators. See, e.g., Janja Komljenovic & Ben Williamson, <em>Behind the Platforms</em>, Edinburgh Univ. Rsch. Explorer (2024). <a href="#fnref129" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn130">
+    <span class="footnote-number">130.</span> Kashmir Hill, <em>The Professors Are Using ChatGPT, and Some Students Aren't Happy About It</em>, N.Y. Times (May 14, 2025). <a href="#fnref130" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn131">
+    <span class="footnote-number">131.</span> See, e.g., Emma Green, <em>Inside the Trump Administration's Assault on Higher Education</em>, The New Yorker (Oct. 13, 2025). <a href="#fnref131" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn132">
+    <span class="footnote-number">132.</span> Siva Vaidhyanathan, <em>Strategic Mumblespeak</em>, Slate, Jun. 2012. Universities, of course, aren't the only educational institution subject to destruction by AI systems. K-12 schools will also gradually corrode. See Jennifer Vilcarino & Lauraine Langreo, <em>Rising Use of AI in Schools Comes With Big Downsides for Students</em>, Education Week (Oct. 8, 2025); Faith Boninger & T. Philip Nichols, <em>Fit for Purpose? How Today's Commercial Digital Platforms Subvert Key Goals of Public Education</em>, National Education Policy Center (2025). <a href="#fnref132" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn133">
+    <span class="footnote-number">133.</span> Erin Carroll, <em>Press Benefits and the Public Imagination</em>, Knight First Amendment Institute; Julie Gerstein & Margaret Sullivan, <em>Can AI Tools Meet Journalistic Standards?</em>, Columbia Journalism Review; Jason Whittaker, <em>Tech Giants, Artificial Intelligence, and the Future of Journalism</em> (2019). <a href="#fnref133" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn134">
+    <span class="footnote-number">134.</span> For a recent summary of debates concerning the First Amendment's "press clause," see <em>The Press Clause: The Forgotten First Amendment</em>, Floyd Abrams Institution for the Freedom of Expression (2024). Cf. Vicki C. Jackson, <em>Knowledge Institutions in Constitutional Democracy</em>, 14 J. Media L. 275, 280 (2022); see also Paul Horwitz, <em>First Amendment Institutions</em> 161 (2013). <a href="#fnref134" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn135">
+    <span class="footnote-number">135.</span> Australian Associated Press, <em>You Won't Believe What Degrading Practice the Pope Just Condemned</em>, The Guardian (Oct. 9, 2025). <a href="#fnref135" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn136">
+    <span class="footnote-number">136.</span> See Zoë Schiffer and Louise Matsakis, <em>OpenAI Is Preparing to Launch a Social App for AI-Generated Videos</em>, Wired (2025); Jason Koebler, <em>AI Generated 'Boring History' Videos Are Flooding YouTube and Drowning Out Real History</em>, 404 Media (2025); Iris van Rooij, <em>AI Slop and the Destruction of Knowledge</em> (Aug. 12, 2025). <a href="#fnref136" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn137">
+    <span class="footnote-number">137.</span> Zeynep Tufekci, <em>The A.O.C. Deepfake Was Terrible. The Proposed Solution Is Delusional.</em>, N.Y. Times (Aug. 11, 2025). <a href="#fnref137" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn138">
+    <span class="footnote-number">138.</span> Phil Williamson, <em>Take the Time and Effort to Correct Misinformation</em>, 540 Nature 171 (2016). <a href="#fnref138" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn139">
+    <span class="footnote-number">139.</span> Cory Doctorow, <em>Enshittification: Why Everything Suddenly Got Worse and What to Do About It</em> (2025). <a href="#fnref139" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn140">
+    <span class="footnote-number">140.</span> Felix M. Simon, <em>Artificial Intelligence in the News: How AI Retools, Rationalizes, and Reshapes Journalism and the Public Arena</em>, Columbia Journalism Review (Feb. 2024). <a href="#fnref140" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn141">
+    <span class="footnote-number">141.</span> Kate Crawford, <em>Eating the Future: The Metabolic Logic of AI Slop</em>, E-Flux. <a href="#fnref141" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn142">
+    <span class="footnote-number">142.</span> Julie E. Cohen, <em>Between Truth and Power: The Legal Constructions of Informational Capitalism</em> (2019). Musk owns X (formerly Twitter) and xAI; Bezos owns Amazon and the Washington Post; Gates owns Microsoft (stake in OpenAI); Zuckerberg owns Meta. <a href="#fnref142" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn143">
+    <span class="footnote-number">143.</span> Julie Cohen, <em>Oligarchy, State, and Cryptopia</em>, 94 Fordham L. Rev. (forthcoming). <a href="#fnref143" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn144">
+    <span class="footnote-number">144.</span> John Kroll, <em>Digging Deeper into the 5 W's of Journalism</em>, International Journalists' Network. <a href="#fnref144" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn145">
+    <span class="footnote-number">145.</span> Robert D. Putnam, <em>Bowling Alone: The Collapse and Revival of American Community</em> 27 (Revised and updated ed. 2020). <a href="#fnref145" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn146">
+    <span class="footnote-number">146.</span> Id. at 18-22. <a href="#fnref146" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn147">
+    <span class="footnote-number">147.</span> Id. at 21. <a href="#fnref147" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn148">
+    <span class="footnote-number">148.</span> Id. at 21. <a href="#fnref148" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn149">
+    <span class="footnote-number">149.</span> Id. at 134-137. <a href="#fnref149" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn150">
+    <span class="footnote-number">150.</span> With apologies to William Butler Yeats. See <em>The Second Coming</em>. <a href="#fnref150" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn151">
+    <span class="footnote-number">151.</span> See https://www.fastcompany.com/91342098/ai-chatbots-loneliness-epidemic-zuckerberg-aristotle; https://time.com/6257790/ai-chatbots-love/; https://explodingtopics.com/blog/chatbot-statistics. <a href="#fnref151" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn152">
+    <span class="footnote-number">152.</span> Id. at 27. <a href="#fnref152" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn153">
+    <span class="footnote-number">153.</span> Putnam supra note 145, at 45-46. <a href="#fnref153" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn154">
+    <span class="footnote-number">154.</span> See, e.g., Cohen, supra note 143; see also Putnam supra note 145. <a href="#fnref154" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn155">
+    <span class="footnote-number">155.</span> Jill Lepore, <em>How We the People Lost Control of Our Lives, and How We Can Get It Back</em>, New York Times (Sept. 17, 2025). <a href="#fnref155" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn156">
+    <span class="footnote-number">156.</span> Id. <a href="#fnref156" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn157">
+    <span class="footnote-number">157.</span> Id. <a href="#fnref157" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn158">
+    <span class="footnote-number">158.</span> Like they say in other contexts, "the first taste is always free." <a href="#fnref158" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn159">
+    <span class="footnote-number">159.</span> See Emily Forlini, <em>Alaska School Cell Phone Policy Cites Fake Studies Hallucinated by AI</em>, PCMag (2025). <a href="#fnref159" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn160">
+    <span class="footnote-number">160.</span> See Joe Patrice, <em>California Bar Reveals It Used AI For Exam Questions, Because Of Course It Did</em>, Above the Law (2025). <a href="#fnref160" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn161">
+    <span class="footnote-number">161.</span> See Mark Jackley, <em>10 Ways State and Local Governments Are Applying AI</em>, Oracle OCI (Aug. 7, 2024); see also Maddy Dwyer & Quinn Anex-Ries, <em>AI in Local Government</em>, Center for Democracy & Technology (April 15, 2025); Ryan Calo & Danielle Citron, <em>The Automated Administrative State</em>, 70 Emory L. J. 797 (2021). <a href="#fnref161" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn162">
+    <span class="footnote-number">162.</span> See, e.g., Mark P. McKenna and Woodrow Hartzog, 61 Wake Forest Law Review (forthcoming 2026). <a href="#fnref162" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn163">
+    <span class="footnote-number">163.</span> Shannon Vallor, <em>The AI Mirror: How to Reclaim Our Humanity in an Age of Machine Thinking</em> (2024). <a href="#fnref163" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn164">
+    <span class="footnote-number">164.</span> Cohen, <em>Between Truth and Power</em>, supra note 142; Julie Cohen, <em>Infrastructuring the Digital Public Sphere</em>, 25 Yale Journal of Law & Technology (2023); Marietje Schaake, <em>The Tech Coup: How to Save Democracy from Silicon Valley</em>. <a href="#fnref164" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn165">
+    <span class="footnote-number">165.</span> Woodrow Hartzog, Neil Richards, Ryan Durrie, and Jordan Francis, <em>Against AI Half Measures</em>, Florida Law Rev. (forthcoming 2026). <a href="#fnref165" class="back-to-text">↩</a>
+</div>
+
+<div class="footnote" id="fn166">
+    <span class="footnote-number">166.</span> For a recent and award-winning analysis of technology and human progress, see Daren Acemoglu and Simon Johnson, <em>Power and Progress: Our 1000-year Struggle over Technology and Prosperity</em> (2024). <a href="#fnref166" class="back-to-text">↩</a>
+</div>
+```
+
+</section>
+
+</body>
+</html>
